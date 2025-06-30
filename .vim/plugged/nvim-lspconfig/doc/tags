@@ -1,0 +1,17 @@
+:LspInfo	lspconfig.txt	/*:LspInfo*
+:LspRestart	lspconfig.txt	/*:LspRestart*
+:LspStart	lspconfig.txt	/*:LspStart*
+:LspStop	lspconfig.txt	/*:LspStop*
+lspconfig	lspconfig.txt	/*lspconfig*
+lspconfig-all	configs.txt	/*lspconfig-all*
+lspconfig-commands	lspconfig.txt	/*lspconfig-commands*
+lspconfig-completion	lspconfig.txt	/*lspconfig-completion*
+lspconfig-configurations	lspconfig.txt	/*lspconfig-configurations*
+lspconfig-debugging	lspconfig.txt	/*lspconfig-debugging*
+lspconfig-new	lspconfig.txt	/*lspconfig-new*
+lspconfig-quickstart	lspconfig.txt	/*lspconfig-quickstart*
+lspconfig-resolved	lspconfig.txt	/*lspconfig-resolved*
+lspconfig-usage	lspconfig.txt	/*lspconfig-usage*
+lspconfig-vs-vim.lsp.config	lspconfig.txt	/*lspconfig-vs-vim.lsp.config*
+lspconfig.txt	lspconfig.txt	/*lspconfig.txt*
+root	lspconfig.txt	/*root*

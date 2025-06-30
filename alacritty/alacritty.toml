@@ -1,0 +1,100 @@
+[terminal.shell]
+program = "wsl.exe"
+args = ["-d", "ubuntu", "--user", "alexey"]
+
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+startup_mode = "Windowed"
+
+# Window dimensions
+dimensions = { columns = 128, lines = 37 }
+# Window startup position
+position = { x = 390,y = 260 }
+
+title = "Alacritty"
+dynamic_title = false
+class = { instance = "Alacritty", general = "Alacritty" }
+
+padding = { x = 10, y = 10 }
+dynamic_padding = false
+
+opacity = 0.9
+blur = true
+
+decorations = "ButtonLess"
+decorations_theme_variant = "None"
+
+
+[font]
+normal.family = "MesloLGS NF"
+size = 12.0
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_timeout = 0
+
+
+[mouse]
+hide_when_typing = true
+bindings = []
+
+
+[scrolling]
+# Maximum number of lines in the scrolling buffer
+history = 1000
+
+# Number of lines scrolled for every input scroll increment
+multiplier = 3
+
+
+[keyboard]
+bindings = [
+  # Ctrl + C — copying selected text 
+  { key = "C", mods = "Control", action = "Copy" },
+
+  # Ctrl + V — paste buffering text
+  { key = "V", mods = "Control", action = "Paste" },
+
+  # Disable standart combinations Ctrl+Shift+c/v
+  { key = "C", mods = "Control|Shift", action = "None" },
+  { key = "V", mods = "Control|Shift", action = "None" },
+
+  # Open a new window (Ctrl + Shift + N)
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+]
+
+
+# Color schema like Catptuccin Macchiato
+[colors]
+draw_bold_text_with_bright_colors = true
+
+primary.background = "#1e1e2e"
+primary.foreground = "#dcdfe4"
+
+cursor.text = "#1e1e2e"
+cursor.cursor = "#f5e0dc"
+
+normal.black = "#45475a"
+normal.red = "#f38ba8"
+normal.green = "#a6e3a1"
+normal.blue = "#89b4fa"
+normal.cyan = "#94e2d5"
+normal.magenta = "#cba6f7"
+normal.yellow = "#f9e2af"
+normal.white = "#bac2de"
+bright.black = "#585b70"
+bright.red = "#eba0ac"
+bright.green = "#b4ddc4"
+bright.blue = "#7da6dd"
+bright.cyan = "#7fdbd3"
+bright.magenta = "#cba6f7"
+bright.yellow = "#f9e2af"
+bright.white = "#dce2ec"
+

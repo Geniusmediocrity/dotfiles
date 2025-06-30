@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["**/*.test.*", "test/**/*", "**/__mocks__/**/*"],
+  "compilerOptions": {
+    "declaration": true
+  }
+}

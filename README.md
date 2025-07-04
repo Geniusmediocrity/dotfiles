@@ -24,7 +24,7 @@ _The **\<user\>** template means your user's name_
 
 ## Fonts
 
-In terminals such as alacritty or wezterm I use MesloLGS NF fonts. You can install it <a href="https://github.com/jkutner/powerlevel11k/blob/master/font.md">here</a> or you can use your own font.
+In terminals such as alacritty or wezterm I use Dank Mono Nerd Font. You can install it <a href="https://eng.fontke.com/search/font/Dank%20Mono/">here</a> or you can use your own font.
 
 ## Script:
 

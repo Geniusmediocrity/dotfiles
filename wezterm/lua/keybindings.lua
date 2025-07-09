@@ -69,6 +69,13 @@ config.keys = {
 		mods = "CTRL",
 		action = act({ SendString = "\x17" }),
 	},
+
+	{
+		brief = "Kill Current Process",
+		key = "q",
+		mods = "CTRL",
+		action = act({ SendString = "\x03" }),
+	},
 }
 
 -- Switching between tabs on Ctrl + Alt + <number-of-tab>

@@ -79,7 +79,23 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git z zsh-syntax-highlighting zsh-autosuggestions pip python uv docker redis-cli)
+
+
+# === Plugins ===
+plugins=(
+	git
+	z
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	pip
+	python
+	uv
+	docker
+	redis-cli
+	colorize
+	colored-man-pages
+	history
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,12 +106,14 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+
+# === EDITOR exports ===
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -113,8 +131,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # === Aliases ===
-alias redisgo='sudo systemctl restart redis-server && iredis'
-alias r="radian"
+
+# valkey-server -- only for arch linux(including manjaro)
+# On other distro, for example deb similar -- valkey.service should be replaced with redis-server
+alias redisgo='sudo systemctl restart valkey.service && iredis'
+
+#TODO: alias r="radian"
 alias ls="eza --tree --level=1 --icons=always --no-time -h --group"
 alias du="ncdu"
 alias cat="bat"
@@ -130,8 +152,13 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# === PATH exports ===
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Python PATH which installed by uv
+export PATH="$HOME/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/bin:$PATH"
 
 # Created by `pipx` on 2025-05-27 06:11:37
 export PATH="$PATH:/home/alexey/.local/bin"

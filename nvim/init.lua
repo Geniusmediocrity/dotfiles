@@ -1111,6 +1111,8 @@ vim.keymap.set('n', '<A-c>', ':tabclose<CR><CR>', { desc = 'Close current tab' }
 vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = '[S]ave file changes' })
 -- Copy highlited text
 vim.keymap.set('v', '<C-c>', 'y', { desc = '[C]opy highlited text' })
+-- Undo smth
+vim.keymap.set('n', '<C-z>', 'u', { desc = 'Undo smth' })
 
 -- NOTE: neo-tree config
 
@@ -1147,3 +1149,8 @@ vim.api.nvim_create_user_command('NeotreeOpenDir', open_neo_tree_from_dir, {
 
 -- Mapping: \d → open tree from another directory
 vim.keymap.set('n', '\\d', ':NeotreeOpenDir<CR>', { desc = 'Открыть Neo-Tree из другой директории' })
+
+vim.opt.relativenumber = true
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4

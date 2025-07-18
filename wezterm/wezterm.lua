@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- === Terminal and Shell ===
-config.scrollback_lines = 3000
+config.scrollback_lines = 10000
 
 -- === Virtual environments ===
 config.set_environment_variables = {

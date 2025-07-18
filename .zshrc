@@ -137,10 +137,14 @@ fi
 alias redisgo='sudo systemctl restart valkey.service && iredis'
 
 #TODO: alias r="radian"
+
 alias ls="eza --tree --level=1 --icons=always --no-time -h --group"
-alias du="ncdu"
-alias cat="bat"
 alias cd="z"
+alias cat="bat"
+
+alias du="ncdu"
+alias df="dysk"
+
 
 # === Yazi setup ===
 function y() {

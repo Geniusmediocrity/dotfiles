@@ -21,20 +21,22 @@ local cnfg_top_bar = function(window, pane)
 		cmd_font = wezterm.nerdfonts.custom_vim
 	elseif cmd == "tmux" then
 		cmd_font = wezterm.nerdfonts.cod_terminal_tmux
+	elseif cmd == "python" or cmd == "pip" or cmd == "uv" then
+		cmd_font = wezterm.nerdfonts.dev_python
 	elseif string.lower(cmd):find("redis") then
 		cmd_font = wezterm.nerdfonts.dev_redis
 	elseif string.lower(cmd):find("postgres") or string.lower(cmd):find("psql") then
 		cmd_font = wezterm.nerdfonts.dev_postgresql
 	elseif string.lower(cmd):find("docker") then
 		cmd_font = wezterm.nerdfonts.dev_docker
-	elseif string.lower(cmd):find("radian") or string.lower(cmd):find("r") then
-		cmd_font = wezterm.nerdfonts.md_language_r
 	elseif cmd == "ansible" then
 		cmd_font = wezterm.nerdfonts.dev_ansible
 	elseif cmd == "terraform" then
 		cmd_font = wezterm.nerdfonts.dev_terraform
 	elseif cmd == "lua" then
 		cmd_font = wezterm.nerdfonts.dev_lua
+	elseif string.lower(cmd):find("radian") or string.lower(cmd):find("r") then
+		cmd_font = wezterm.nerdfonts.md_language_r
 	else
 		cmd_font = wezterm.nerdfonts.fa_code
 	end

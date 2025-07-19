@@ -1,0 +1,24 @@
+2025-07-16 22:11:51.537 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 22:11:51.567 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 22:11:51.568 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 22:11:52.333 [info] Started local extension host with pid 8636.
+2025-07-16 22:11:52.751 [info] ComputeTargetPlatform: linux-x64
+2025-07-16 22:11:52.754 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 22:11:52.831 [warning] [REditorSupport.r]: Cannot register 'r.rpath.windows'. This property is already registered.
+2025-07-16 22:11:52.832 [warning] [REditorSupport.r]: Cannot register 'r.rpath.mac'. This property is already registered.
+2025-07-16 22:11:52.832 [warning] [REditorSupport.r]: Cannot register 'r.rpath.linux'. This property is already registered.
+2025-07-16 22:11:54.357 [error] [Extension Host] (node:8636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 22:11:54.461 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 22:11:54.493 [info] Settings Sync: Account status changed from uninitialized to available
+2025-07-16 22:11:55.267 [info] [perf] Render performance baseline is 29ms
+2025-07-16 22:12:37.466 [error] An unknown error occurred. Please consult the log for more details.
+2025-07-16 22:37:29.202 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-07-16 23:08:49.868 [info] Started local extension host with pid 16476.
+2025-07-16 23:08:52.971 [error] [Extension Host] (node:16476) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:08:53.508 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 23:10:33.429 [info] Started local extension host with pid 16890.
+2025-07-16 23:10:36.457 [error] [Extension Host] (node:16890) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:10:37.198 [info] Settings Sync: Token updated for the account Geniusmediocrity

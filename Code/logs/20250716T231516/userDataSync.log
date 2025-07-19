@@ -1,0 +1,37 @@
+2025-07-16 23:15:18.236 [info] [AutoSync] Using settings sync service https://vscode-sync.trafficmanager.net/
+2025-07-16 23:15:18.236 [info] [AutoSync] Enabled.
+2025-07-16 23:15:18.236 [info] [AutoSync] Suspended until auth token is available.
+2025-07-16 23:15:20.082 [info] [AutoSync] Triggered by Interval
+2025-07-16 23:15:20.082 [info] Sync started.
+2025-07-16 23:15:20.699 [info] Settings: No changes found during synchronizing settings.
+2025-07-16 23:15:20.719 [info] Keybindings: No changes found during synchronizing keybindings.
+2025-07-16 23:15:20.726 [info] Snippets: No changes found during synchronizing snippets.
+2025-07-16 23:15:20.731 [info] Tasks: No changes found during synchronizing tasks.
+2025-07-16 23:15:20.740 [info] GlobalState: No changes found during synchronizing ui state.
+2025-07-16 23:15:20.807 [info] Extensions: No changes found during synchronizing extensions.
+2025-07-16 23:15:20.812 [info] Prompts: No changes found during synchronizing prompts.
+2025-07-16 23:15:20.814 [info] Profiles: No changes found during synchronizing profiles.
+2025-07-16 23:15:20.817 [info] Sync done. Took 737ms
+2025-07-16 23:15:31.996 [info] [AutoSync] Triggered by Activity
+2025-07-16 23:15:31.996 [info] Sync started.
+2025-07-16 23:15:32.377 [info] Settings: No changes found during synchronizing settings.
+2025-07-16 23:15:32.384 [info] Keybindings: No changes found during synchronizing keybindings.
+2025-07-16 23:15:32.387 [info] Snippets: No changes found during synchronizing snippets.
+2025-07-16 23:15:32.394 [info] Tasks: No changes found during synchronizing tasks.
+2025-07-16 23:15:32.408 [info] GlobalState: No changes found during synchronizing ui state.
+2025-07-16 23:15:32.522 [info] Extensions: No changes found during synchronizing extensions.
+2025-07-16 23:15:32.538 [info] Prompts: No changes found during synchronizing prompts.
+2025-07-16 23:15:32.541 [info] Profiles: No changes found during synchronizing profiles.
+2025-07-16 23:15:32.543 [info] Sync done. Took 548ms
+2025-07-16 23:15:44.357 [info] [AutoSync] Triggered by Activity
+2025-07-16 23:15:44.357 [info] Sync started.
+2025-07-16 23:15:44.516 [info] Settings: No changes found during synchronizing settings.
+2025-07-16 23:15:44.521 [info] Keybindings: No changes found during synchronizing keybindings.
+2025-07-16 23:15:44.525 [info] Snippets: No changes found during synchronizing snippets.
+2025-07-16 23:15:44.528 [info] Tasks: No changes found during synchronizing tasks.
+2025-07-16 23:15:44.534 [info] GlobalState: No changes found during synchronizing ui state.
+2025-07-16 23:15:45.109 [info] Extensions: Updated remote extensions. Removed: ["lancewilhelm.nvim-dashboard"].
+2025-07-16 23:15:45.116 [info] Extensions: Updated last synchronized extensions. Skipped: ["linjun.azure-sql-server-support"].
+2025-07-16 23:15:45.121 [info] Prompts: No changes found during synchronizing prompts.
+2025-07-16 23:15:45.123 [info] Profiles: No changes found during synchronizing profiles.
+2025-07-16 23:15:45.126 [info] Sync done. Took 769ms

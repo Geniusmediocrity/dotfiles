@@ -1,0 +1,7 @@
+# Grep Conspect
+
+* command: ``` grep -l "\<string\>" \<file\> ``` -- give list of files with this row
+* command: ``` grep -L "\<string\>" \<file\> ``` -- give list of files where no this row
+
+* command: ``` grep -! "\<string\>" \<file\> ```
+* command: ``` grep -! "\<string\>" \<file\> ``` --

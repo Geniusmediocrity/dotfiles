@@ -1,0 +1,18 @@
+2025-07-16 23:09:32.209 [info] Activating extension
+2025-07-16 23:09:32.209 [info] Saving ~/mydev/Programming/Lua/learning to global state.
+2025-07-16 23:09:32.209 [info] Registering command nvim-dashboard.open
+2025-07-16 23:09:32.209 [info] Registering command nvim-dashboard.handleKey
+2025-07-16 23:09:32.209 [info] Registering command nvim-dashboard.clearRecentWorkspaces
+2025-07-16 23:09:32.209 [info] Registering command nvim-dashboard.clearRecentFiles
+2025-07-16 23:09:32.209 [info] Has open workspace: true
+2025-07-16 23:10:03.737 [info] Saving ~/mydev/Programming/Lua/learning/test.lua to global state
+2025-07-16 23:10:07.258 [info] Saving ~/mydev/Programming/Lua/learning/test.lua to global state
+2025-07-16 23:10:33.337 [info] Deactivating extension
+2025-07-16 23:10:37.768 [info] Activating extension
+2025-07-16 23:10:37.769 [info] Saving ~/mydev/Programming/Lua/learning to global state.
+2025-07-16 23:10:37.769 [info] Registering command nvim-dashboard.open
+2025-07-16 23:10:37.769 [info] Registering command nvim-dashboard.handleKey
+2025-07-16 23:10:37.769 [info] Registering command nvim-dashboard.clearRecentWorkspaces
+2025-07-16 23:10:37.769 [info] Registering command nvim-dashboard.clearRecentFiles
+2025-07-16 23:10:37.769 [info] Has open workspace: true
+2025-07-16 23:11:07.137 [info] Deactivating extension

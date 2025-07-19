@@ -1,0 +1,103 @@
+2025-07-16 23:15:18.809 [info] Extension host with pid 19215 started
+2025-07-16 23:15:18.809 [info] Skipping acquiring lock for /home/alexey/.config/Code/User/workspaceStorage/7872908982aeac6d3f5d1253ae83dad4.
+2025-07-16 23:15:18.981 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github-enterprise'
+2025-07-16 23:15:19.104 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-16 23:15:19.106 [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.159 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.235 [info] ExtensionService#_doActivateExtension lancewilhelm.nvim-dashboard, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.242 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.263 [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.664 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.750 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-16 23:15:19.789 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:19.805 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:19.904 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:19.995 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-16 23:15:20.407 [info] Eager extensions activated
+2025-07-16 23:15:20.469 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.473 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.507 [info] ExtensionService#_doActivateExtension aaron-bond.better-comments, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.513 [info] ExtensionService#_doActivateExtension bierner.color-info, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.524 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.594 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.597 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.741 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.763 [info] ExtensionService#_doActivateExtension GitByBit.gitbybit, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.766 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:20.835 [info] ExtensionService#_doActivateExtension HenryTsz.nvim, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.005 [info] ExtensionService#_doActivateExtension kingleo.openurl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.007 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.215 [info] ExtensionService#_doActivateExtension naumovs.color-highlight, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.228 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.254 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:21.263 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:32.017 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2025-07-16 23:15:46.985 [info] Extension host terminating: renderer closed the MessagePort
+2025-07-16 23:15:47.022 [error] An error occurred when disposing the subscriptions for extension 'Gruntfuggly.todo-tree':
+2025-07-16 23:15:47.023 [error] AggregateError: Encountered errors while disposing of store
+    at xr (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:822)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:15046
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at yY.eb (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:11919)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9874
+    at Array.map (<anonymous>)
+    at yY.$ (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9862)
+    at yY.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:10105)
+    at zA.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:126:914)
+    at gs (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:5228)
+    at MessagePortMain.<anonymous> (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:1775)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:3073)
+2025-07-16 23:15:47.039 [info] Extension host with pid 19215 exiting with code 0
+2025-07-16 23:15:48.173 [info] Extension host with pid 19515 started
+2025-07-16 23:15:48.173 [info] Skipping acquiring lock for /home/alexey/.config/Code/User/workspaceStorage/7872908982aeac6d3f5d1253ae83dad4.
+2025-07-16 23:15:48.202 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github-enterprise'
+2025-07-16 23:15:48.251 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:48.266 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:48.382 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-16 23:15:48.465 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-16 23:15:48.494 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onCommand:vscode-html-css.validate'
+2025-07-16 23:15:48.498 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2025-07-16 23:15:49.208 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-16 23:15:49.212 [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag, startup: true, activationEvent: '*'
+2025-07-16 23:15:49.258 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2025-07-16 23:15:49.343 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: true, activationEvent: '*'
+2025-07-16 23:15:49.368 [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion, startup: true, activationEvent: '*'
+2025-07-16 23:15:49.718 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-16 23:15:49.807 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-16 23:15:50.109 [info] Eager extensions activated
+2025-07-16 23:15:50.114 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.116 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.151 [info] ExtensionService#_doActivateExtension aaron-bond.better-comments, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.157 [info] ExtensionService#_doActivateExtension bierner.color-info, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.167 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.237 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.386 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.410 [info] ExtensionService#_doActivateExtension GitByBit.gitbybit, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.413 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.484 [info] ExtensionService#_doActivateExtension HenryTsz.nvim, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.653 [info] ExtensionService#_doActivateExtension kingleo.openurl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.655 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.861 [info] ExtensionService#_doActivateExtension naumovs.color-highlight, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.873 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.897 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:15:50.907 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-07-16 23:16:04.274 [info] Extension host terminating: renderer closed the MessagePort
+2025-07-16 23:16:04.323 [error] An error occurred when disposing the subscriptions for extension 'Gruntfuggly.todo-tree':
+2025-07-16 23:16:04.327 [error] AggregateError: Encountered errors while disposing of store
+    at xr (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:822)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:15046
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at yY.eb (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:11919)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9874
+    at Array.map (<anonymous>)
+    at yY.$ (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9862)
+    at yY.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:10105)
+    at zA.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:126:914)
+    at gs (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:5228)
+    at MessagePortMain.<anonymous> (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:1775)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:3073)
+2025-07-16 23:16:04.347 [info] Extension host with pid 19515 exiting with code 0

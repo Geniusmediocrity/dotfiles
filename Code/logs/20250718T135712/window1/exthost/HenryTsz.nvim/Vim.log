@@ -1,0 +1,11 @@
+2025-07-18 13:57:23.524 [info] Active editor: file:///home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md
+2025-07-18 14:02:23.891 [info] Executing :w
+2025-07-18 14:07:12.481 [info] Executing :w
+2025-07-18 14:11:08.081 [info] Executing :%s/will be the same/wil be like this/g
+2025-07-18 14:11:48.255 [info] Executing :w
+2025-07-18 14:44:16.293 [info] /home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md closed
+2025-07-18 14:44:20.844 [info] Active editor: file:///home/alexey/mydev/Programming/Linux/conspects/grep_conspect.md
+2025-07-18 14:44:59.458 [info] Executing :w
+2025-07-18 14:46:00.502 [info] Executing :w
+2025-07-18 14:59:51.543 [info] /home/alexey/mydev/Programming/Linux/conspects/grep_conspect.md closed
+2025-07-18 14:59:57.837 [info] Active editor: file:///home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md

@@ -81,7 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 
-# === Plugins ===
+# === === Plugins === ===
 plugins=(
 	git
 	z
@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 
-# === EDITOR exports ===
+# === === EDITOR exports === ===
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -130,23 +130,38 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# === Aliases ===
+# === === Aliases === ===
 
+# --- Interactive Redis cli upper ---
 # valkey-server -- only for arch linux(including manjaro)
 # On other distro, for example deb similar -- valkey.service should be replaced with redis-server
 alias redisgo='sudo systemctl restart valkey.service && iredis'
 
 #TODO: alias r="radian"
 
+# --- Eza (better ls) ---
 alias ls="eza --tree --level=1 --icons=always --no-time -h --group"
-alias cd="z"
-alias cat="bat"
 
+# --- Zoxide (better cd) ---
+eval $(zoxide init zsh)
+alias cd="z"
+
+# --- Bat (better cat) ---
+alias cat="bat"
+export BAT_THEME=tokyonight_night
+
+# --- Ncdu (better du) ---
 alias du="ncdu"
+
+# --- Dysk (better df) ---
 alias df="dysk"
 
+# --- Thefuck ---
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
 
-# === Yazi setup ===
+
+# === === Yazi setup === ===
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -157,7 +172,66 @@ function y() {
 }
 
 
-# === PATH exports ===
+# === === Fzf - the best files, commands, ssh finder === ===
+# Setup fzf key bindings and fuzy completion
+eval "$(fzf --zsh)"
+
+# --- setup fzf theme ---
+fg="#CBE0F0"
+bg="#1e1f3b"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+darker_cyan="#65C9CE"
+
+export FZF_DEFAULT_OPTS="
+--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${darker_cyan},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${darker_cyan},header:${cyan}
+--border='rounded' --preview-window='border-rounded'"
+
+# -- Use fd instead of fzf --
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --icons=always --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+
+
+# === === PATH exports === ===
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -168,3 +242,4 @@ export PATH="$HOME/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/bin:$P
 export PATH="$PATH:/home/alexey/.local/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
+

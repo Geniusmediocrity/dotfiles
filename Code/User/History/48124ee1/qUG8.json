@@ -1,0 +1,104 @@
+{
+    "git.terminalGitEditor": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "settingsSync.ignoredSettings": [],
+    "settingsSync.ignoredExtensions": [
+        "vscode.theme-monokai"
+    ],
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "mssql.enableRichExperiences": true,
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "*.pickle": "default",
+        "*.bin": "default",
+        "*.db": "hexEditor.hexedit"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[ignore]": {},
+    "workbench.colorTheme": "Bearded Theme Monokai Metallian",
+    "git.openRepositoryInParentFolders": "never",
+    "database-client.autoSync": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never",
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off"
+    },
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "*.py": "python",
+        "*.rmd": "markdown"
+    },
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "sqlite3-editor.ui.minimizePanel": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "84E57453-4550-4D28-95B8-EE2DEAAAD6AA"
+        }
+    ],
+    "mssql.connections": [],
+    "terminal.integrated.suggest.enabled": true,
+    "database-client.highlightSQLBlock": true,
+    "database-client.capitalizeKeywordsWhenFormatting": true,
+    "github.copilot.advanced": {
+        "authProvider": "github-enterprise"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "pgsql.serverGroups": [
+        {
+            "name": "Servers",
+            "id": "CB29AECF-F62F-40D9-9893-4F9DAE62FAA7",
+            "isDefault": true
+        }
+    ],
+    "pgsql.connections": [
+        {
+            "id": "4A726322-0CAB-41DB-B73A-B6D7332D3C3B",
+            "groupId": "CB29AECF-F62F-40D9-9893-4F9DAE62FAA7",
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 15,
+            "applicationName": "vscode-pgsql",
+            "clientEncoding": "utf8",
+            "sslmode": "prefer",
+            "password": "",
+            "user": "freeaiasist",
+            "server": "localhost",
+            "database": "freeaiasistant",
+            "profileName": "freeaiasistant",
+            "port": "5532",
+            "expiresOn": 0
+        }
+    ],
+    "liveServer.settings.port": 5500,
+    "workbench.colorCustomizations": {
+        },
+    "window.titleBarStyle": "custom",
+    "[r]": {
+        "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",<>/"
+    },
+    "r.rterm.linux": "/home/alexey/.local/bin/radian",
+    "r.rpath.linux": "/home/alexey/.local/bin/radian",
+}

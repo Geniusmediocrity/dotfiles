@@ -1,0 +1,39 @@
+2025-07-17 14:12:23.886 [info] /home/alexey/.config/Code/User/settings.json closed
+2025-07-17 14:12:23.995 [info] /home/alexey/.config/Code/User/keybindings.json closed
+2025-07-17 14:12:55.050 [info] Executing :~/mydev/Linux/
+2025-07-17 14:13:22.791 [info] Executing :e ~/mydev/Linux/conspects
+2025-07-17 14:13:22.871 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects
+2025-07-17 14:13:22.892 [warning] getLineLength() called with out-of-bounds line 7
+2025-07-17 14:13:22.892 [warning] invalid cursor position. [[7, 18] | [7, 18]].
+2025-07-17 14:13:37.274 [info] Executing :e ~/mydev/Linux/conspects/grep_conspect.md
+2025-07-17 14:13:39.228 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects/grep_conspect.md
+2025-07-17 14:13:41.238 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects
+2025-07-17 14:13:43.822 [info] /home/alexey/mydev/Linux/conspects closed
+2025-07-17 14:13:43.854 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects/grep_conspect.md
+2025-07-17 14:13:45.969 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects
+2025-07-17 14:13:48.772 [info] /home/alexey/mydev/Linux/conspects closed
+2025-07-17 14:13:48.783 [info] Active editor: untitled:/home/alexey/mydev/Linux/conspects/grep_conspect.md
+2025-07-17 14:14:45.418 [info] /home/alexey/mydev/Linux/conspects/grep_conspect.md closed
+2025-07-17 14:14:45.479 [info] Active editor: file:///home/alexey/mydev/Programming/Lua/learning/test.lua
+2025-07-17 14:15:00.700 [info] Executing :e ~/mydev/Programming/Linux/conspects/grep_conspect.md
+2025-07-17 14:15:00.768 [info] Active editor: file:///home/alexey/mydev/Programming/Linux/conspects/grep_conspect.md
+2025-07-17 14:15:24.555 [error] Error running task: Error: Failed to handle key `1`: Unknown action type
+2025-07-17 14:15:25.745 [error] Error running task: Error: Failed to handle key `1`: Unknown action type
+2025-07-17 14:19:43.301 [info] Executing :W
+2025-07-17 14:19:44.611 [info] Executing :w
+2025-07-17 14:27:50.794 [info] Executing :w
+2025-07-17 14:30:00.009 [info] Executing :w
+2025-07-17 14:30:17.104 [info] Executing :w
+2025-07-17 14:45:15.594 [info] Executing :e sed_conspect.md
+2025-07-17 14:45:15.632 [info] Active editor: untitled:/home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md
+2025-07-17 14:45:15.657 [warning] getLineLength() called with out-of-bounds line 15
+2025-07-17 14:45:15.657 [warning] invalid cursor position. [[15, 104] | [15, 104]].
+2025-07-17 14:45:21.133 [info] /home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md closed
+2025-07-17 14:45:21.157 [info] Active editor: file:///home/alexey/mydev/Programming/Linux/conspects/sed_conspect.md
+2025-07-17 14:46:16.060 [info] /home/alexey/mydev/Programming/Linux/conspects/grep_conspect.md closed
+2025-07-17 14:49:34.077 [info] Executing :w
+2025-07-17 15:00:01.661 [info] Executing :w
+2025-07-17 15:03:23.658 [info] Executing :W
+2025-07-17 15:03:24.920 [info] Executing :w
+2025-07-17 15:04:31.016 [info] Executing :w
+2025-07-17 15:07:00.824 [info] Executing :w

@@ -1,0 +1,7 @@
+2025-07-16 23:15:18.339 [info] ComputeTargetPlatform: linux-x64
+2025-07-16 23:15:18.727 [info] Marked extension as removed wrathcodes.nvim-ui-plus-0.0.22
+2025-07-16 23:15:18.780 [info] Deleted marked for removal extension from disk wrathcodes.nvim-ui-plus /home/alexey/.vscode/extensions/wrathcodes.nvim-ui-plus-0.0.22
+2025-07-16 23:15:20.192 [info] ComputeTargetPlatform: linux-x64
+2025-07-16 23:15:43.642 [info] Uninstalling extension from the profile: lancewilhelm.nvim-dashboard@0.1.4 vscode-userdata:/home/alexey/.vscode/extensions/extensions.json
+2025-07-16 23:15:43.726 [info] Marked extension as removed lancewilhelm.nvim-dashboard-0.1.4
+2025-07-16 23:15:44.126 [info] Successfully uninstalled extension from the profile lancewilhelm.nvim-dashboard@0.1.4 vscode-userdata:/home/alexey/.vscode/extensions/extensions.json

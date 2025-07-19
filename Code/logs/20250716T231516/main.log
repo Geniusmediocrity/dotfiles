@@ -1,0 +1,5 @@
+2025-07-16 23:15:16.426 [info] update#setState idle
+2025-07-16 23:15:46.254 [info] update#setState checking for updates
+2025-07-16 23:15:46.258 [info] update#setState idle
+2025-07-16 23:15:47.040 [info] Extension host with pid 19215 exited with code: 0, signal: unknown.
+2025-07-16 23:16:04.348 [info] Extension host with pid 19515 exited with code: 0, signal: unknown.

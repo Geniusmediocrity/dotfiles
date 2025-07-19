@@ -1,0 +1,86 @@
+2025-07-17 14:12:19.878 [info] Extension host with pid 14094 started
+2025-07-17 14:12:19.878 [info] Skipping acquiring lock for /home/alexey/.config/Code/User/workspaceStorage/7872908982aeac6d3f5d1253ae83dad4.
+2025-07-17 14:12:20.220 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github-enterprise'
+2025-07-17 14:12:20.260 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2025-07-17 14:12:20.269 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-17 14:12:20.726 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-17 14:12:20.736 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-17 14:12:20.796 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-17 14:12:21.141 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-17 14:12:21.144 [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.168 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.209 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.227 [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.404 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.440 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-17 14:12:21.620 [info] Eager extensions activated
+2025-07-17 14:12:21.622 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.625 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.641 [info] ExtensionService#_doActivateExtension aaron-bond.better-comments, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.646 [info] ExtensionService#_doActivateExtension bierner.color-info, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.650 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.682 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.684 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.755 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.778 [info] ExtensionService#_doActivateExtension GitByBit.gitbybit, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.780 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.812 [info] ExtensionService#_doActivateExtension HenryTsz.nvim, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.888 [info] ExtensionService#_doActivateExtension kingleo.openurl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.889 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.984 [info] ExtensionService#_doActivateExtension naumovs.color-highlight, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:21.990 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:22.003 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:12:22.011 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-07-17 14:13:22.892 [warning] TextEditor is closed/disposed
+2025-07-17 14:13:22.892 [warning] TextEditor is closed/disposed
+2025-07-17 14:13:22.998 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2025-07-17 14:13:22.998 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model1)
+2025-07-17 14:13:37.289 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-17 14:13:37.311 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-17 14:13:37.474 [info] ExtensionService#_doActivateExtension shd101wyy.markdown-preview-enhanced, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-17 14:13:39.230 [warning] TextEditor is closed/disposed
+2025-07-17 14:13:39.230 [warning] TextEditor is closed/disposed
+2025-07-17 14:13:39.305 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2025-07-17 14:13:39.305 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:2,$model5)
+2025-07-17 14:13:39.741 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2025-07-17 14:13:45.992 [warning] TextEditor is closed/disposed
+2025-07-17 14:13:45.992 [warning] TextEditor is closed/disposed
+2025-07-17 14:15:01.015 [warning] TextEditor is closed/disposed
+2025-07-17 14:15:01.015 [warning] TextEditor is closed/disposed
+2025-07-17 14:15:01.085 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2025-07-17 14:15:01.085 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model1)
+2025-07-17 14:45:15.658 [warning] TextEditor is closed/disposed
+2025-07-17 14:45:15.658 [warning] TextEditor is closed/disposed
+2025-07-17 14:45:15.707 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2025-07-17 14:45:15.707 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model8)
+2025-07-17 15:07:02.686 [info] Extension host terminating: renderer closed the MessagePort
+2025-07-17 15:07:02.738 [error] An error occurred when disposing the subscriptions for extension 'Gruntfuggly.todo-tree':
+2025-07-17 15:07:02.738 [error] AggregateError: Encountered errors while disposing of store
+    at xr (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:822)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:15046
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1056
+    at Object.dispose (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:8:705)
+    at yY.eb (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:11919)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9874
+    at Array.map (<anonymous>)
+    at yY.$ (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9862)
+    at yY.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:10105)
+    at zA.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:126:914)
+    at gs (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:5228)
+    at MessagePortMain.<anonymous> (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:1775)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:3073)
+2025-07-17 15:07:02.762 [error] TypeError: r.some is not a function
+    at h.saveToDisk (/home/alexey/.vscode/extensions/henrytsz.nvim-2.2.2/out/extension.js:2:663606)
+    at Object.t.deactivate (/home/alexey/.vscode/extensions/henrytsz.nvim-2.2.2/out/extension.js:2:798917)
+    at yY.eb (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:11724)
+    at file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9874
+    at Array.map (<anonymous>)
+    at yY.$ (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:9862)
+    at yY.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:10105)
+    at zA.terminate (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:126:914)
+    at gs (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:5228)
+    at MessagePortMain.<anonymous> (file:///var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:361:1775)
+    at MessagePortMain.emit (node:events:518:28)
+    at Object.MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:3073)
+2025-07-17 15:07:02.765 [info] Extension host with pid 14094 exiting with code 0

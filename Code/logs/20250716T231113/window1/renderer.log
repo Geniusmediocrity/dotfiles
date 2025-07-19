@@ -1,0 +1,30 @@
+2025-07-16 23:11:14.630 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:11:14.661 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:11:14.661 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:11:15.480 [info] Started local extension host with pid 17742.
+2025-07-16 23:11:16.277 [info] ComputeTargetPlatform: linux-x64
+2025-07-16 23:11:16.284 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:11:16.414 [warning] [REditorSupport.r]: Cannot register 'r.rpath.windows'. This property is already registered.
+2025-07-16 23:11:16.415 [warning] [REditorSupport.r]: Cannot register 'r.rpath.mac'. This property is already registered.
+2025-07-16 23:11:16.415 [warning] [REditorSupport.r]: Cannot register 'r.rpath.linux'. This property is already registered.
+2025-07-16 23:11:18.074 [error] [Extension Host] (node:17742) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:11:19.013 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 23:11:19.019 [info] Settings Sync: Account status changed from uninitialized to available
+2025-07-16 23:11:20.129 [info] [perf] Render performance baseline is 41ms
+2025-07-16 23:11:29.868 [info] Started local extension host with pid 18082.
+2025-07-16 23:11:31.427 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 23:11:32.328 [error] [Extension Host] (node:18082) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:11:49.786 [error] Unable to load file:///home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json: Unable to read file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json' (Error: Unable to resolve nonexistent file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json'): Error: Unable to load file:///home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json: Unable to read file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json' (Error: Unable to resolve nonexistent file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json')
+    at kYe.X (vscode-file://vscode-app/var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1867:7016)
+2025-07-16 23:12:04.092 [error] Unable to load file:///home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json: Unable to read file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json' (Error: Unable to resolve nonexistent file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json'): Error: Unable to load file:///home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json: Unable to read file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json' (Error: Unable to resolve nonexistent file '/home/alexey/.vscode/extensions/beardedbear.beardedtheme-10.1.0/themes/bearded-theme-themanopia.json')
+    at kYe.X (vscode-file://vscode-app/var/lib/snapd/snap/code/198/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1867:7016)
+2025-07-16 23:12:30.734 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-07-16 23:12:30.736 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-07-16 23:12:42.235 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-07-16 23:13:33.688 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-07-16 23:13:47.331 [info] Started local extension host with pid 18453.
+2025-07-16 23:13:49.133 [error] [Extension Host] (node:18453) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:13:49.605 [info] Settings Sync: Token updated for the account Geniusmediocrity

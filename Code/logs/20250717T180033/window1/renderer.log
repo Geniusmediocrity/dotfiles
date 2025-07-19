@@ -1,0 +1,17 @@
+2025-07-17 18:00:35.076 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-17 18:00:35.111 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-17 18:00:35.111 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-17 18:00:35.864 [info] Started local extension host with pid 13299.
+2025-07-17 18:00:35.954 [info] ComputeTargetPlatform: linux-x64
+2025-07-17 18:00:35.988 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2025-07-17 18:00:36.258 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-17 18:00:37.730 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-17 18:00:37.782 [info] Settings Sync: Account status changed from uninitialized to available
+2025-07-17 18:00:38.828 [info] [perf] Render performance baseline is 33ms
+2025-07-17 18:00:40.153 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-17 18:00:40.187 [warning] [REditorSupport.r]: Cannot register 'r.rpath.windows'. This property is already registered.
+2025-07-17 18:00:40.187 [warning] [REditorSupport.r]: Cannot register 'r.rpath.mac'. This property is already registered.
+2025-07-17 18:00:40.187 [warning] [REditorSupport.r]: Cannot register 'r.rpath.linux'. This property is already registered.
+2025-07-17 18:00:40.382 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-17 18:00:41.228 [error] [Extension Host] (node:13299) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)

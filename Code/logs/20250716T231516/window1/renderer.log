@@ -1,0 +1,18 @@
+2025-07-16 23:15:17.113 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:15:17.144 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:15:17.145 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:15:17.816 [info] Started local extension host with pid 19215.
+2025-07-16 23:15:18.255 [info] ComputeTargetPlatform: linux-x64
+2025-07-16 23:15:18.261 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-07-16 23:15:18.340 [warning] [REditorSupport.r]: Cannot register 'r.rpath.windows'. This property is already registered.
+2025-07-16 23:15:18.341 [warning] [REditorSupport.r]: Cannot register 'r.rpath.mac'. This property is already registered.
+2025-07-16 23:15:18.341 [warning] [REditorSupport.r]: Cannot register 'r.rpath.linux'. This property is already registered.
+2025-07-16 23:15:19.505 [error] [Extension Host] (node:19215) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-07-16 23:15:20.078 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 23:15:20.081 [info] Settings Sync: Account status changed from uninitialized to available
+2025-07-16 23:15:20.671 [info] [perf] Render performance baseline is 37ms
+2025-07-16 23:15:47.127 [info] Started local extension host with pid 19515.
+2025-07-16 23:15:48.637 [info] Settings Sync: Token updated for the account Geniusmediocrity
+2025-07-16 23:15:49.579 [error] [Extension Host] (node:19515) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)

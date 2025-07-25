@@ -1,0 +1,17 @@
+2025-07-23 16:01:09.675 [info] Extension host with pid 5446 started
+2025-07-23 16:01:09.675 [info] Skipping acquiring lock for /home/alexey/.config/Code/User/workspaceStorage/06e20668ae9b7fd47065d5ff3c23e896.
+2025-07-23 16:01:09.861 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github-enterprise'
+2025-07-23 16:01:09.888 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2025-07-23 16:01:09.894 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-23 16:01:09.909 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-23 16:01:09.923 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-23 16:01:10.005 [info] ExtensionService#_doActivateExtension shd101wyy.markdown-preview-enhanced, startup: false, activationEvent: 'onLanguage:markdown'
+2025-07-23 16:01:10.846 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-23 16:01:10.850 [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag, startup: true, activationEvent: '*'
+2025-07-23 16:01:10.874 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2025-07-23 16:01:10.910 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: true, activationEvent: '*'
+2025-07-23 16:01:10.926 [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion, startup: true, activationEvent: '*'
+2025-07-23 16:01:11.164 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-23 16:01:11.204 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-23 16:01:11.264 [info] Extension host terminating: renderer closed the MessagePort
+2025-07-23 16:01:11.270 [info] Extension host with pid 5446 exiting with code 0

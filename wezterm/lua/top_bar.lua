@@ -29,6 +29,8 @@ local cnfg_top_bar = function(window, pane)
 		cmd_font = wezterm.nerdfonts.dev_postgresql
 	elseif string.lower(cmd):find("docker") then
 		cmd_font = wezterm.nerdfonts.dev_docker
+	elseif cmd == "ssh" then
+		cmd_font = wezterm.nerdfonts.md_ssh
 	elseif cmd == "ansible" then
 		cmd_font = wezterm.nerdfonts.dev_ansible
 	elseif cmd == "terraform" then

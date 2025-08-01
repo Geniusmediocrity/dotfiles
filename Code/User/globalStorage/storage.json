@@ -7,6 +7,9 @@
         "folders": [
             {
                 "folderUri": "file:///home/alexey/mydev/Programming/Linux/conspects"
+            },
+            {
+                "folderUri": "file:///home/alexey/dotfiles/nvim.bak"
             }
         ],
         "emptyWindows": []
@@ -15,7 +18,8 @@
     "profileAssociations": {
         "workspaces": {
             "file:///home/alexey/mydev/Programming/Lua/learning": "__default__profile__",
-            "file:///home/alexey/mydev/Programming/Linux/conspects": "__default__profile__"
+            "file:///home/alexey/mydev/Programming/Linux/conspects": "__default__profile__",
+            "file:///home/alexey/dotfiles/nvim.bak": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -43,7 +47,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 275,
             "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
@@ -51,8 +55,8 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/alexey/mydev/Programming/Linux/conspects",
-            "backupPath": "/home/alexey/.config/Code/Backups/8c78b793d8c70571a130aa6f50bc7709",
+            "folder": "file:///home/alexey/dotfiles/nvim.bak",
+            "backupPath": "/home/alexey/.config/Code/Backups/ff2e1f45437d030e989608a09374ce89",
             "uiState": {
                 "mode": 0,
                 "x": 200,
@@ -74,6 +78,10 @@
                 },
                 "06e20668ae9b7fd47065d5ff3c23e896": {
                     "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "80d3007751bf94ceff5e36e9d0a66834": {
+                    "sideBarVisible": true,
                     "auxiliaryBarVisible": false
                 }
             }

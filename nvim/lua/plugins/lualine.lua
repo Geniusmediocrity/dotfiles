@@ -52,16 +52,18 @@ return {
 	-- configure lualine with modified theme
 	lualine.setup({
 		options = {
-		theme = my_lualine_theme,
+			icons_ebabled = true,
+			theme = my_lualine_theme,
 			component_separators = '',
 			section_separators = { left = '', right = '' },
 			disabled_filetypes = {
-				statusline = { "NeoTree" },
+				statusline = { "neo-tree" },
 				winbar = {},
 			},
+			always_show_tabline = true,
 		},
 		sections = {
-			lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 }, },
+			lualine_a = { { 'mode', separator = { left = '', right = '' }, right_padding = 2 } },
 
 			lualine_b = {'branch', 'diff', 'diagnostics'},
 
@@ -79,16 +81,16 @@ return {
 	        },
 
 		    lualine_y = {'progress'},
-		    lualine_z = { {'location', separator = { right = '' }, left_padding = 2 }, },
+		    lualine_z = { {'location', separator = { left = '', right = '' }, left_padding = 2 } }
 		},
 
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = {'filename'},
-			lualine_x = {'location'},
+			lualine_c = { { 'filename', separator = { left = '' } } },
+			lualine_x = {},
 			lualine_y = {},
-			lualine_z = {}
+			lualine_z = { { 'location', separator = { right = '' } } }
 		},
     })
   end,

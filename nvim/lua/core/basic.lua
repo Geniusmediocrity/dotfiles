@@ -10,7 +10,10 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.o.mouse = "a"
+vim.o.mousemoveevent = true
 vim.o.showmode = false
+
+vim.opt.swapfile = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()

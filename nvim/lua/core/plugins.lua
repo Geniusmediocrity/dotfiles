@@ -22,6 +22,15 @@ require("lazy").setup({
 	-- NeoTree configuration
 	require('plugins.neotree'),
 
+	-- Telescope (Fuzzy Finder)
+	require('plugins.telescope'),
+
+	-- A pretty list for showing diagnostics, references, telescope results, quickfix and location lists to help you solve all the trouble your code is causing.
+	require('plugins.trouble'),
+
+	-- Bufferline -- turns buffers(on the top of the screen in nvim) to tabs
+	require('plugins.bufferline'),
+
 	-- TreeSiteer
 	require('plugins.treesitter'),
 
@@ -42,6 +51,19 @@ require("lazy").setup({
 
 	-- Color picker to pick the colors
 	require('plugins.color_picker'),
+	require('plugins.easycolor'),
+
+	-- Comments
+	require('plugins.comments'),
+
+	-- Highlight todo, notes, etc in comments
+	require('plugins.todo'),
+
+	-- Which-key- Useful plugin to show you pending keybinds.
+	require('plugins.which_key'),
+
+	-- Noice = Nice, Noise, Notice
+	require('plugins.noice'),
 
 	-- LSP
 	require('plugins.lsp.lspconfig'),

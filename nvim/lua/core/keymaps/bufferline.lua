@@ -1,6 +1,10 @@
--- Go Prev/Next tab
+-- Go Prev tab
 vim.keymap.set('n', '<A-h>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Previous Tab' })
+vim.keymap.set('n', '<A-j>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Previous Tab' })
+
+-- Go Next tab
 vim.keymap.set('n', '<A-l>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next Tab' })
+vim.keymap.set('n', '<A-k>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next Tab' })
 
 -- Go to tabs by number
 for n = 1, 9 do

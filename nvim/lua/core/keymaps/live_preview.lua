@@ -1,0 +1,5 @@
+vim.keymap.set('n', '<leader>ls', ':LivePreview start<CR>', { silent = true, desc = "[L]ive Preview [S]tart" })
+vim.keymap.set('n', '<leader>lc', ':LivePreview close<CR>', { silent = true, desc = "[L]ive Preview [C]lose" })
+vim.keymap.set('n', '<leader>lp', ':LivePreview pick<CR>', { silent = true, desc = "[L]ive Preview [P]ick file" })
+vim.keymap.set('n', '<leader>lh', ':help LivePreview<CR>', { silent = true, desc = "[L]ive Preview [H]elp" })
+vim.keymap.set('n', '<leader>lp', ':LivePreview pick<CR>', { silent = true, desc = "[L]ive Preview [P]ick" })

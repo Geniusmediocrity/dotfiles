@@ -20,6 +20,8 @@ return { -- Useful plugin to show you pending keybinds.
 			{ '<leader>c', group = ' [C]olor' },
 			{ '<leader>g', group = '󰬲 [G]o to' },
 			{ '<leader>t', group = '󱐚 [T]rouble' },
+			{ '<leader>w', group = ' [W]indow' },
+			{ '<leader>M', group = ' [M]arkdown' },
 		},
 		require('core.keymaps.which_key')
 	},

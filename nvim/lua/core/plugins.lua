@@ -68,6 +68,7 @@ require("lazy").setup({
 	-- LSP
 	require('plugins.lsp.lspconfig'),
 
-	"powerman/vim-plugin-ruscmd",
+	--Indential gides
+	require('plugins.ibl'),
 
 })

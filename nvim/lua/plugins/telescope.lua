@@ -57,8 +57,5 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		pcall(require('telescope').load_extension, 'fzf')
 		pcall(require('telescope').load_extension, 'ui-select')
 
-		-- Keymaps
-		require('core.keymaps.telescope')
-
 	end,
 }

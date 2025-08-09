@@ -23,6 +23,5 @@ return { -- Useful plugin to show you pending keybinds.
 			{ '<leader>w', group = ' [W]indow' },
 			{ '<leader>M', group = ' [M]arkdown' },
 		},
-		require('core.keymaps.which_key')
 	},
 }

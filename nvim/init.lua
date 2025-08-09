@@ -1,8 +1,8 @@
 -- Basic
-require('core.basic')
+require('core.options')
+
+-- Plugins
 require('core.plugins')
 
-require('core.keymaps.basic')
-require('core.keymaps.neotree')
-require('core.keymaps.color_picker')
-require('core.keymaps.bufferline')
+-- Keymaps
+require('core.keymaps')

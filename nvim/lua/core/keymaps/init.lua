@@ -7,4 +7,6 @@ return {
 	require('core.keymaps.url_open'),
 	require('core.keymaps.telescope'),
 	require('core.keymaps.which_key'),
+	require('core.keymaps.compiler'),
+	require('core.keymaps.treewalker'),
 }

@@ -5,6 +5,7 @@ return {
 	config = function()
 		require('bufferline').setup {
 			options = {
+				buffer_close_icon = "",
 				mode = 'tabs',
 				separator_style = 'slope',
 				indicator = {
@@ -40,6 +41,27 @@ return {
 					return s .. "%*"
 				end,
 			},
+			highlights = {
+				buffer_selected = {
+					italic = true,
+					bold = false,
+				},
+				error_selected = {
+					bold = false
+				},
+				warning_selected = {
+					bold = false
+				},
+				diagnostic_selected = {
+					bold = false,
+				},
+				hint_selected = {
+					bold = false,
+				},
+				info_selected = {
+					bold = false,
+				}
+			}
 		}
     end,
 }

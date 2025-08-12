@@ -206,8 +206,22 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
-        --
+        ts_ls = {},
+		html = {
+			cmd = { "vscode-html-language-server", "--stdio" },
+			filetypes = { "html" },
+			init_options = {
+				configurationSection = { "html", "css", "javascript" },
+				embeddedLanguages = {
+					css = true,
+					javascript = true
+				}
+			},
+			root_dir = function(fname)
+				return root_pattern(fname) or vim.loop.os_homedir()
+			end,
+			settings = {}
+		},
 
         lua_ls = {
           -- cmd = { ... },

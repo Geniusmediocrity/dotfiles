@@ -6,6 +6,7 @@ return {
 		"hrsh7th/cmp-path", -- source for file system paths
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-cmdline",
 		{
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
@@ -55,9 +56,11 @@ return {
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp"},
+				{ name = "nvim_lua"},
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
+				{ name = 'cmdline' },
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
@@ -66,8 +69,23 @@ return {
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
-
 			},
+
+			cmp.setup.cmdline(":", {
+				mapping = cmp.mapping.preset.cmdline(),
+					sources = cmp.config.sources({
+						{ name = "path" },
+					},
+					{
+						{ name = "cmdline" },
+					}),
+			}),
+			cmp.setup.cmdline({ "/", "?" }, {
+				mapping = cmp.mapping.preset.cmdline(),
+				sources = {
+					{ name = "buffer" },
+				},
+			})
 		})
 	end,
 }

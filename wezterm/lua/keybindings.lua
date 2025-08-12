@@ -21,6 +21,7 @@ config.keys = {
 	-- disable standart combines Ctrl+Shift+C/V
 	{ key = "c", mods = "CTRL|SHIFT", action = act.Nop },
 	{ key = "v", mods = "CTRL|SHIFT", action = act.Nop },
+	{ key = "l", mods = "CTRL|SHIFT", action = act.Nop },
 
 	{
 		brief = "Spawn New Tab",

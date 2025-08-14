@@ -2,16 +2,33 @@ return {
 	-- lazy.nvim
 	"folke/noice.nvim",
 	event = "VeryLazy",
-		dependencies = {
+	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
 		"nvim-lua/plenary.nvim",
 	},
 	opts = {
+		views = {
+			cmdline_popup = {
+				border = {
+					style = "rounded",
+					padding = { 0, 1 },
+				},
+				position = {
+					row = "97%",
+					col = "50%",
+					anchor = "SW",
+				},
+				size = {
+					width = "40%", -- Ширина окна
+					height = "auto",
+				},
+				animation = "slide_up",
+			},
+		},
 		cmdline = {
 			enabled = true,
+			view = "cmdline_popup",
 		},
 	},
-	vim.keymap.set('n', '<leader>nh', ':Noice dismiss<CR>', { silent = true, desc = "[N]oice [H]ide All Messages" })
 }
-

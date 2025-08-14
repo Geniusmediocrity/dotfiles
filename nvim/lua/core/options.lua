@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
 
@@ -15,7 +15,8 @@ vim.opt.smartindent = true
 
 vim.o.mouse = "a"
 vim.o.mousemoveevent = true
-vim.o.showmode = false
+vim.o.showmode = true
+vim.opt.showcmd = true
 
 vim.opt.swapfile = false
 
@@ -23,7 +24,7 @@ vim.opt.termguicolors = true
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -37,8 +38,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
-
+vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 250
 
@@ -51,10 +51,10 @@ vim.o.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -66,9 +66,13 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- Highlight when yanking (copying) text
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  callback = function()
-    vim.hl.on_yank()
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })
+
+-- Navic requiring
+vim.o.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"

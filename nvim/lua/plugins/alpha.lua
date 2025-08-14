@@ -31,11 +31,6 @@ return {
 				dashboard.button("r", " Recent files", "<cmd>Telescope oldfiles <CR>"),
 				dashboard.button("g", " Find text", "<cmd>Telescope live_grep <CR>"),
 				dashboard.button(
-					"s",
-					" Load Last Session",
-					"<cmd>lua require('persistence').load({ last = true }) <CR>"
-				),
-				dashboard.button(
 					"c",
 					" Config",
 				"<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath("config").. " <CR>"

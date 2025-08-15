@@ -11,6 +11,6 @@
 return {
 
 	-- Small NeoVim wrapper for zoxide
-	'nanotee/zoxide.vim',
-	dependencies = {'junegunn/fzf' },
+	"nanotee/zoxide.vim",
+	dependencies = { "junegunn/fzf" },
 }

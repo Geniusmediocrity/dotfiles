@@ -67,3 +67,12 @@ This script is designed to automatically synchronize configuration files from th
    ```
 
 **These script mean that the dotfiles directory is located along the path `~/dotfiles`, which contains these scripts.**
+
+#### Tools for linux
+
+delta -- prettier git diff. Install it by: `sudo pacman -S delta`
+fzf -- the best fuzzy finder. Install it by: `sudo pacman -S fzf`
+eza -- like ls but cooler. Install it by: `sudo pacman -S eza`
+bat -- like bat but cooler. Install it by: `sudo pacman -S bat`
+thefuck -- fuck. Install it by: `sudo pacman -S thefuck`
+zoxide -- or z is like cd but more cooler and lazier. Install it by: `sudo pacman -S zoxide`

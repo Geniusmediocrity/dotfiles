@@ -177,17 +177,13 @@ function y() {
 eval "$(fzf --zsh)"
 
 # --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#1e1f3b"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
-darker_cyan="#65C9CE"
-
-export FZF_DEFAULT_OPTS="
---color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${darker_cyan},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${darker_cyan},header:${cyan}
---border='rounded' --preview-window='border-rounded'"
+# Catppuccin mocha colorscheme:
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8 \
+--color=fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC \
+--color=marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8 \
+--color=selected-bg:#45475A \
+--color=border:#6C7086,label:#CDD6F4"
 
 # -- Use fd instead of fzf --
 

@@ -74,7 +74,7 @@ config.keys = {
 	{
 		brief = "Kill Current Process",
 		key = "q",
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		action = act({ SendString = "\x03" }),
 	},
 }

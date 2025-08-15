@@ -25,6 +25,7 @@ config.color_scheme = "Catppuccin Mocha"
 -- === Appearance ===
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.94
 config.status_update_interval = 1000
 wezterm.on("format-tab-title", require("lua.tab_bar"))

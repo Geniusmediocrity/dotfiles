@@ -5,7 +5,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
 			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out, "WarningMsg" },
+			{ out,                            "WarningMsg" },
 			{ "\nPress any key to exit..." },
 		}, true, {})
 		vim.fn.getchar()
@@ -46,9 +46,6 @@ require("lazy").setup({
 	-- Theme
 	require("plugins.themes"),
 
-	-- Smooth cursor animate
-	-- require('plugins.cursor_animate'),
-
 	-- Vim Tmux Navigator
 	require("plugins.vim_tmux_navigator"),
 
@@ -64,12 +61,8 @@ require("lazy").setup({
 	-- Urls opener
 	require("plugins.url_open"),
 
-	-- Colorizer for preview color
-	require("plugins.colorizer"),
-
-	-- Color picker to pick the colors
-	require("plugins.color_picker"),
-	require("plugins.easycolor"),
+	-- Color pickers and color previewers
+	require("plugins.color_pickers"),
 
 	-- Comments
 	-- Highlight todo, notes, etc in comments

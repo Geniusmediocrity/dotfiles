@@ -11,8 +11,11 @@ return {
 		{
 			"mfussenegger/nvim-dap-python",
 			config = function()
-				local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-				require("dap-python").setup(path)
+				local function expand_path(path)
+					return vim.fn.expand(path)
+				end
+
+				require("dap-python").setup(expand_path("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"))
 			end,
 		},
 	},
@@ -77,6 +80,7 @@ return {
 			end,
 			desc = "Debug: Step [O]ut",
 		},
+
 		{
 			"<leader>db",
 			function()
@@ -91,6 +95,7 @@ return {
 			end,
 			desc = "Debug: set [b]reakpoint",
 		},
+
 		-- toggle to see last session result. without this, you can't see session output in case of unhandled exception.
 		{
 			"<leader>ds",
@@ -105,6 +110,15 @@ return {
 				require("dapui").toggle()
 			end,
 			desc = "Debug: [s]ee last session result.",
+		},
+
+		-- close debuger
+		{
+			"<leader>dc",
+			function()
+				require("dapui").close()
+			end,
+			desc = "Debug: [C]lose DAP UI",
 		},
 	},
 	config = function()
@@ -165,6 +179,25 @@ return {
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
-		require("dap-python").setup()
+		dap.configurations.python = {
+			{
+				type = "python",
+				request = "launch",
+				name = "Launch file (with .venv)",
+				program = "${file}",
+				pythonPath = function()
+					-- Сhecking the existence .venv at the root of project
+					local venv = vim.fn.getcwd() .. "/.venv"
+					if vim.fn.executable(venv .. "/bin/python") == 1 then
+						return venv .. "/bin/python"
+					else
+						-- fallback on global python
+						return "python"
+					end
+				end,
+				console = "integratedTerminal", -- very usefull to see input and output
+				justMyCode = true,  -- If false very usefull to debug third-party code
+			},
+		}
 	end,
 }

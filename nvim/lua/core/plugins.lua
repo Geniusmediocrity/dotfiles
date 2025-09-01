@@ -58,6 +58,9 @@ require("lazy").setup({
 	-- A collection of small QoL plugins for Neovim.
 	require("plugins.snacks"),
 
+	-- Fast code navigating
+	require("plugins.flush"),
+
 	-- Urls opener
 	require("plugins.url_open"),
 

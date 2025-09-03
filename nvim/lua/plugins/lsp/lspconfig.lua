@@ -8,7 +8,7 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			{ "j-hui/fidget.nvim", opts = {} },
+			{ "j-hui/fidget.nvim",    opts = {} },
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
@@ -196,7 +196,7 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- C/C++
-				-- clangd = {},
+				clangd = {},
 
 				-- Python
 				pyright = {},
@@ -250,8 +250,8 @@ return {
 				},
 
 				-- Docker and Docker Compose
-				docker_language_server = {},
-				docker_compose_language_service = {},
+				-- docker_language_server = {},
+				-- docker_compose_language_service = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers)

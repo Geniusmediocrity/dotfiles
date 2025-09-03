@@ -22,9 +22,6 @@ require("lazy").setup({
 	-- NeoTree configuration
 	require("plugins.neotree"),
 
-	-- Automatic sessions saver/opener
-	require("plugins.asessions"),
-
 	-- Git signs helper
 	require("plugins.gitsigns"),
 

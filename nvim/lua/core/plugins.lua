@@ -5,7 +5,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
 			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out,                            "WarningMsg" },
+			{ out, "WarningMsg" },
 			{ "\nPress any key to exit..." },
 		}, true, {})
 		vim.fn.getchar()
@@ -42,6 +42,9 @@ require("lazy").setup({
 
 	-- Theme
 	require("plugins.themes"),
+
+	-- Pretty cursor animated
+	-- require("plugins.smear_cursor"),
 
 	-- Vim Tmux Navigator
 	require("plugins.vim_tmux_navigator"),
@@ -97,6 +100,9 @@ require("lazy").setup({
 
 	-- Compiler for code
 	require("plugins.compiler"),
+
+	-- General framework for context aware hover providers
+	require("plugins.hover"),
 
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),

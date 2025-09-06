@@ -8,7 +8,7 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			{ "j-hui/fidget.nvim",    opts = {} },
+			{ "j-hui/fidget.nvim", opts = {} },
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
@@ -161,10 +161,10 @@ return {
 				underline = { severity = vim.diagnostic.severity.ERROR },
 				signs = {
 					text = {
-						[vim.diagnostic.severity.ERROR] = "󰅚 ",
-						[vim.diagnostic.severity.WARN] = "󰀪 ",
-						[vim.diagnostic.severity.INFO] = "󰋽 ",
-						[vim.diagnostic.severity.HINT] = "󰌶 ",
+						[vim.diagnostic.severity.ERROR] = " ",
+						[vim.diagnostic.severity.WARN] = " ",
+						[vim.diagnostic.severity.INFO] = " ",
+						[vim.diagnostic.severity.HINT] = " ",
 					},
 				},
 				virtual_text = {
@@ -197,17 +197,16 @@ return {
 			local servers = {
 				-- C/C++
 				clangd = {},
+				clang_format = {},
+				cpplint = {},
+				codelldb = {},
 
 				-- Python
 				pyright = {},
 				debugpy = {},
 				ruff = {},
 
-				-- Rust
-				rust_analyzer = {},
-
 				-- Web
-				ts_ls = {},
 				prettier = {},
 				cssls = {},
 				html = {
@@ -218,6 +217,7 @@ return {
 						embeddedLanguages = {
 							css = true,
 							javascript = true,
+							html = true,
 						},
 					},
 					root_dir = function(fname)
@@ -231,7 +231,7 @@ return {
 				shfmt = {},
 
 				-- Sql
-				sqls = {},
+				-- sqls = {},
 				-- postgres_lsp = {},
 
 				-- Lua

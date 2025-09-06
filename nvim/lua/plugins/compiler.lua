@@ -1,9 +1,9 @@
 return {
 	{ -- This plugin
-	"Zeioth/compiler.nvim",
-	cmd = {"CompilerOpen", "CompilerToggleResults", "CompilerRedo"},
-	dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },
-	opts = {},
+		"Zeioth/compiler.nvim",
+		cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+		dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },
+		opts = {},
 	},
 	{ -- The task runner we use
 		"stevearc/overseer.nvim",
@@ -14,8 +14,8 @@ return {
 				direction = "bottom",
 				min_height = 10,
 				max_height = 15,
-				default_detail = 1
+				default_detail = 1,
 			},
 		},
-	}
+	},
 }

@@ -4,6 +4,7 @@ return {
 		"nvimtools/none-ls-extras.nvim",
 		"jayp0521/mason-null-ls.nvim",
 	},
+	event = "VeryLazy",
 
 	config = function()
 		local null_ls = require("null-ls")
@@ -29,6 +30,7 @@ return {
 			formatting.shfmt.with({ args = { "-i", "4" } }),
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
+			formatting.clang_format,
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

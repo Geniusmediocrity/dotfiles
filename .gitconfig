@@ -28,3 +28,5 @@
 
 [diff]
     colorMoved = default
+[safe]
+	directory = /home/alexey/mydev/Programming

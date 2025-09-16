@@ -200,6 +200,7 @@ return {
 				clang_format = {},
 				cpplint = {},
 				codelldb = {},
+				cmake_language_server = {},
 
 				-- Python
 				pyright = {},

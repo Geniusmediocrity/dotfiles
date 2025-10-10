@@ -30,7 +30,8 @@ return {
 			formatting.shfmt.with({ args = { "-i", "4" } }),
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
-			formatting.clang_format,
+			formatting.clang_format.with({ args = { "-style=~/.clang-format" } }),
+			formatting.cmake_format,
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -50,5 +51,10 @@ return {
 				end
 			end,
 		})
+
+		-- Define a custom :Format command
+		vim.api.nvim_create_user_command("Format", function()
+			vim.lsp.buf.format({ async = false })
+		end, { desc = "Format current buffer using LSP" })
 	end,
 }

@@ -67,7 +67,19 @@ return {
 
 				lualine_b = { "branch", "diff", "diagnostics" },
 
-				lualine_c = { "%=", "filename" },
+				lualine_c = {
+					"%=",
+					{
+						"filename",
+						path = 4,
+						symbols = {
+							modified = "[+]", -- Text to show when the file is modified.
+							readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+							unnamed = "[No Name]", -- Text to show for unnamed buffers.
+							newfile = "[New]", -- Text to show for newly created file before fi write
+						},
+					},
+				},
 
 				lualine_x = {
 					{

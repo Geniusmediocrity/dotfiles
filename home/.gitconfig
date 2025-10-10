@@ -30,3 +30,7 @@
     colorMoved = default
 [safe]
 	directory = /home/alexey/mydev/Programming
+
+[difftool "difftastic"]
+    # See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
+    cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"

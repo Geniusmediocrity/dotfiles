@@ -251,8 +251,8 @@ return {
 				},
 
 				-- Docker and Docker Compose
-				-- docker_language_server = {},
-				-- docker_compose_language_service = {},
+				docker_language_server = {},
+				docker_compose_language_service = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers)

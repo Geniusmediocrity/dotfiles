@@ -144,21 +144,20 @@ alias ls="eza --tree --level=1 --icons=always --no-time -h --group"
 
 # --- Zoxide (better cd) ---
 eval $(zoxide init zsh)
-alias cd="z"
+# alias cd="z"
 
 # --- Bat (better cat) ---
 alias cat="bat"
-export BAT_THEME=tokyonight_night
+export BAT_THEME="Catppuccin Mocha"
+#TODO: DONT FORGET: bat cache --build
+# for man pages
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 
 # --- Ncdu (better du) ---
 alias du="ncdu"
 
 # --- Dysk (better df) ---
 alias df="dysk"
-
-# --- Thefuck ---
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
 
 
 # === === Yazi setup === ===
@@ -232,10 +231,11 @@ _fzf_comprun() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Python PATH which installed by uv
-export PATH="$HOME/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/bin:$PATH"
+export PATH="$HOME/.local/share/uv/python/cpython-3.13.7-linux-x86_64-gnu/bin:$PATH"
 
 # Created by `pipx` on 2025-05-27 06:11:37
 export PATH="$PATH:/home/alexey/.local/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
+
 

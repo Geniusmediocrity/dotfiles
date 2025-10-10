@@ -1,0 +1,37 @@
+BasedOnStyle: Google
+IndentWidth: 4
+TabWidth: 4
+ColumnLimit: 100
+UseTab: Always
+
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortLambdasOnASingleLine: None
+
+# Key settings for arrays and initialization lists
+Cpp11BracedListStyle: true
+BinPackArguments: false
+BinPackParameters: false
+
+# Control over curly braces
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: false
+  AfterStruct: false
+  AfterClass: false
+  AfterFunction: false
+  AfterControlStatement: false
+  AfterCaseLabel: false
+  BeforeLambdaBody: false
+  SplitEmptyFunction: true
+
+# Indents
+IndentCaseLabels: false
+IndentPPDirectives: AfterHash
+
+# Miscellaneous
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+PointerAlignment: Left
+DerivePointerAlignment: false

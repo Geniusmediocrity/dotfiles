@@ -45,6 +45,7 @@ return {
 						group = augroup,
 						buffer = bufnr,
 						callback = function()
+							vim.cmd("silent! %s/\\r//g")
 							vim.lsp.buf.format({ async = false })
 						end,
 					})

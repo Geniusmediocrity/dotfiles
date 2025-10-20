@@ -1,12 +1,14 @@
+Language: Cpp
 BasedOnStyle: Google
 IndentWidth: 4
 TabWidth: 4
 ColumnLimit: 100
 UseTab: Always
 
+# Allows
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
 AllowShortLambdasOnASingleLine: None
 
 # Key settings for arrays and initialization lists
@@ -16,6 +18,7 @@ BinPackParameters: false
 
 # Control over curly braces
 BreakBeforeBraces: Custom
+NamespaceIndentation: All
 BraceWrapping:
   AfterEnum: false
   AfterStruct: false

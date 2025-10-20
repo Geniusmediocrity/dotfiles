@@ -231,7 +231,7 @@ _fzf_comprun() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Python PATH which installed by uv
-export PATH="$HOME/.local/share/uv/python/cpython-3.13.7-linux-x86_64-gnu/bin:$PATH"
+export PATH="$HOME/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14:$PATH"
 
 # Created by `pipx` on 2025-05-27 06:11:37
 export PATH="$PATH:/home/alexey/.local/bin"

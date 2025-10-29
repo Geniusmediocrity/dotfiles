@@ -11,4 +11,5 @@ return {
 	require("core.keymaps.treewalker"),
 	require("core.keymaps.noice"),
 	require("core.keymaps.navbuddy"),
+	require("core.keymaps.gitsigns"),
 }

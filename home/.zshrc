@@ -1,3 +1,5 @@
+fastfetch
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -147,7 +149,8 @@ eval $(zoxide init zsh)
 # alias cd="z"
 
 # --- Bat (better cat) ---
-alias cat="bat"
+alias cat="bat --decorations never --italic-text never"
+alias bbat="bat --decorations always --italic-text always"
 export BAT_THEME="Catppuccin Mocha"
 #TODO: DONT FORGET: bat cache --build
 # for man pages
@@ -234,7 +237,6 @@ _fzf_comprun() {
 export PATH="$HOME/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14:$PATH"
 
 # Created by `pipx` on 2025-05-27 06:11:37
-export PATH="$PATH:/home/alexey/.local/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 

@@ -35,31 +35,48 @@
     "break",
     {
       "type": "os",
-      "key": "",
+      "key": "󰣇 ",
       "keyColor": "#89DCEB"
     },
+	{
+      "type": "kernel",
+      "key": " "
+    },
+	{
+      "type": "battery",
+      "key": "󰄌 "
+    },
+	{
+	  "type": "packages",
+	  "key": " "
+	},
+	"break",
     {
       "type": "cpu",
-      "key": "",
+      "key": " ",
       "keyColor": "#F5C2E7"
     },
     {
       "type": "board",
-      "key": "󰚗",
+      "key": "󰚗 ",
       "keyColor": "#FAB387"
     },
     {
       "type": "memory",
-      "key": "",
+      "key": " ",
       "keyColor": "#A6E3A1",
       "format": "{used} / {total} ({percentage})"
     },
+	{
+	  "type": "swap",
+	  "key": "󰾵 ",
+	},
     {
       "type": "disk",
-      "key": "",
+      "key": " ",
       "keyColor": "#94E2D5"
     },
-    "break",
+	"break",
     {
       "type": "colors",
       "symbol": "circle"

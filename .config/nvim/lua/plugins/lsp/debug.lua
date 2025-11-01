@@ -33,7 +33,7 @@ return {
 			function()
 				require("dap").continue()
 			end,
-			desc = "Debug: Start/Continue",
+			desc = "Debug: Start/Continue(Shift + F5)",
 		},
 
 		{
@@ -48,7 +48,7 @@ return {
 			function()
 				require("dap").step_into()
 			end,
-			desc = "Debug: Step [I]nto",
+			desc = "Debug: Step [I]nto(Shift + F2)",
 		},
 
 		{
@@ -63,7 +63,7 @@ return {
 			function()
 				require("dap").step_over()
 			end,
-			desc = "Debug: Step [O]ver",
+			desc = "Debug: Step [O]ver(Shift + F3)",
 		},
 
 		{
@@ -78,7 +78,7 @@ return {
 			function()
 				require("dap").step_out()
 			end,
-			desc = "Debug: Step [O]ut",
+			desc = "Debug: Step [O]ut(Shift + F1)",
 		},
 
 		{
@@ -102,7 +102,7 @@ return {
 			function()
 				require("dapui").toggle()
 			end,
-			desc = "Debug: [s]ee last session result.",
+			desc = "Debug: [s]ee last session result.(F7)",
 		},
 		{
 			"<F7>",
@@ -156,6 +156,26 @@ return {
 					terminate = "",
 				},
 			},
+			layouts = {
+				{
+					elements = {
+						{ id = "scopes", size = 0.45 },
+						{ id = "breakpoints", size = 0.15 },
+						{ id = "stacks", size = 0.20 },
+						{ id = "watches", size = 0.20 },
+					},
+					size = 40, -- ширина в символах (для вертикального окна)
+					position = "left",
+				},
+				{
+					elements = {
+						{ id = "console", size = 0.5 },
+						{ id = "repl", size = 0.5 },
+					},
+					size = 15, -- высота в строках (для горизонтального окна)
+					position = "bottom",
+				},
+			},
 		})
 
 		-- change breakpoint icons
@@ -195,8 +215,23 @@ return {
 						return "python"
 					end
 				end,
-				console = "integratedTerminal", -- very usefull to see input and output
-				justMyCode = true,  -- If false very usefull to debug third-party code
+				console = "integratedTerminal", -- very usefull to see d output
+				justMyCode = true, -- If false very usefull to debug third-party code
+			},
+		}
+		dap.configurations.cpp = {
+			{
+				name = "Launch",
+				type = "codelldb",
+				request = "launch",
+				program = function()
+					-- Get filename without extension(i.e.: main.cpp -> main)
+					local filename = vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")
+					return "./build/debug/" .. filename .. ".elf"
+				end,
+				cwd = "${workspaceFolder}",
+				stopOnEntry = false,
+				args = {},
 			},
 		}
 	end,

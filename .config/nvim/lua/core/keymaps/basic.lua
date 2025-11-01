@@ -31,3 +31,6 @@ vim.keymap.set("n", "<leader>v", '<Cmd>execute "normal! <C-v>"<CR>', { desc = "ó
 
 -- Format buffer keymaps
 vim.keymap.set("n", "<leader>f", ":Format<CR>", { silent = true, desc = "Format buffer" })
+
+-- Toggleterm hide terminal
+vim.keymap.set("i", "<-t><Esc>", 'exe v:count1 . "ToggleTerm"', { silent = true, desc = "Format buffer" })

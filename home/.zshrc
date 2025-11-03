@@ -241,3 +241,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme

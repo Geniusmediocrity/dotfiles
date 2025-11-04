@@ -36,3 +36,5 @@
     cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
 [url "git@github.com:"]
 	insteadOf = <https://github.com/>
+[credential]
+	helper = store

@@ -32,6 +32,7 @@ return {
 			require("none-ls.formatting.ruff_format"),
 			formatting.clang_format.with({ args = { "-style=~/.clang-format" } }),
 			formatting.cmake_format,
+			formatting.asmfmt, -- asembler
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

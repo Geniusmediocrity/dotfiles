@@ -237,9 +237,20 @@ _fzf_comprun() {
 # Python PATH which installed by uv
 export PATH="$HOME/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14:$PATH"
 
+# Python PATH for integrating with c/c++
+export PYTHONHOME="$HOME/.local/share/uv/python/cpython-3.14.0+freethreaded-linux-x86_64-gnu/"
+
 # Created by `pipx` on 2025-05-27 06:11:37
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# pnpm
+export PNPM_HOME="/home/alexey/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

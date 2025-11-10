@@ -209,7 +209,7 @@ return {
 				-- Python
 				pyright = {},
 				debugpy = {},
-				ruff = {},
+				-- ruff = {},
 
 				-- Web
 				prettier = {},

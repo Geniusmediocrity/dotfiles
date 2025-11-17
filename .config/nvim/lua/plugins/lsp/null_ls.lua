@@ -25,7 +25,7 @@ return {
 
 		local sources = {
 			diagnostics.checkmake,
-			formatting.prettier.with({ filetypes = { "html", "css", "js", "json", "yaml", "markdown" } }),
+			formatting.prettier,
 			formatting.stylua,
 			formatting.shfmt.with({ args = { "-i", "4" } }),
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),

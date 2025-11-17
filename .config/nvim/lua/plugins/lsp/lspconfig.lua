@@ -204,7 +204,8 @@ return {
 				clang_format = {},
 				cpplint = {},
 				codelldb = {},
-				cmake_language_server = {},
+				-- cmake_language_server = {},
+				neocmake = {},
 
 				-- Python
 				pyright = {},
@@ -213,6 +214,7 @@ return {
 
 				-- Web
 				prettier = {},
+				tsgo = {},
 				cssls = {},
 				html = {
 					cmd = { "vscode-html-language-server", "--stdio" },

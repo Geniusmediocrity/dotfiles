@@ -31,9 +31,6 @@ return { -- Highlight, edit, and navigate code
 		indent = {
 			enable = true,
 		},
-		autotag = {
-			enable = true,
-		},
 		textobjects = {
 			enable = true,
 		},

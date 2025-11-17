@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -235,10 +235,8 @@ _fzf_comprun() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Python PATH which installed by uv
-export PATH="$HOME/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/bin/python3.14:$PATH"
-
-# Python PATH for integrating with c/c++
-export PYTHONHOME="$HOME/.local/share/uv/python/cpython-3.14.0+freethreaded-linux-x86_64-gnu/"
+export PATH="$HOME/.local/share/uv/python/cpython-3.14.0+freethreaded-linux-x86_64-gnu/bin:$PATH"
+export PATH="$HOME/home/alexey/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/bin:$PATH"
 
 # Created by `pipx` on 2025-05-27 06:11:37
 export PATH="$HOME/.local/bin:$PATH"

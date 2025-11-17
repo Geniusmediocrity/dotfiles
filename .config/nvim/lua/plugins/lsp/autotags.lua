@@ -4,6 +4,11 @@ return {
 	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	config = function()
 		require("nvim-ts-autotag").setup({
+			opts = {
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = true, -- Auto close on trailing </
+			},
 			enable = true,
 			filetypes = {
 				"html",
@@ -22,12 +27,32 @@ return {
 				"astro",
 				"glimmer",
 				"handlebars",
-		},
+			},
 			skip_tags = {
-				"area", "base", "br", "col", "command", "embed", "hr", "img", "input",
-				"keygen", "link", "meta", "param", "source", "track", "wbr", "menuitem",
-		}
+				"area",
+				"base",
+				"br",
+				"col",
+				"command",
+				"embed",
+				"hr",
+				"img",
+				"input",
+				"keygen",
+				"link",
+				"meta",
+				"param",
+				"source",
+				"track",
+				"wbr",
+				"menuitem",
+			},
 		})
-  end,
+	end,
+	opts = {
+		-- Defaults
+		enable_close = true, -- Auto close tags
+		enable_rename = true, -- Auto rename pairs of tags
+		enable_close_on_slash = true, -- Auto close on trailing </
+	},
 }
-

@@ -13,6 +13,15 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "html", "css", "javascript", "typescript", "json", "jsonc" },
+	callback = function()
+		vim.opt.shiftwidth = 2 -- how many spaces when shifting (>>, <<, etc.)
+		vim.opt.tabstop = 2 -- the width of the tab character (in spaces)
+		vim.opt.softtabstop = 2 -- how many spaces when pressing tab (so that tab "feels" like 2 spaces)
+	end,
+})
+
 vim.o.mouse = "a"
 vim.o.mousemoveevent = true
 vim.o.showmode = true

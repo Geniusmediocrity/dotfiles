@@ -20,14 +20,17 @@ BinPackParameters: false
 BreakBeforeBraces: Custom
 NamespaceIndentation: All
 BraceWrapping:
-  AfterEnum: false
-  AfterStruct: false
-  AfterClass: false
+  AfterEnum: true
+  AfterStruct: true
+  AfterClass: true
   AfterFunction: false
   AfterControlStatement: false
   AfterCaseLabel: false
   BeforeLambdaBody: false
   SplitEmptyFunction: true
+
+# Indents for access modifiers
+AccessModifierOffset: -2
 
 # Indents
 IndentCaseLabels: false

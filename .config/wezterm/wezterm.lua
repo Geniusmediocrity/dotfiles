@@ -1,6 +1,10 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- === Wsl features ===
+-- config.default_prog = { 'wsl', '-d', 'arch' }
+-- config.default_cwd = "/home/alexey"
+
 -- === Terminal and Shell ===
 config.scrollback_lines = 10000
 

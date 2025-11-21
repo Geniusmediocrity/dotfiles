@@ -19,7 +19,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="awesomepanda"
+# ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -245,6 +245,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 # Source theme
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/awesomepanda.zsh-theme
 
 # pnpm
 export PNPM_HOME="/home/alexey/.local/share/pnpm"

@@ -24,7 +24,6 @@ return {
 		})
 
 		local sources = {
-			diagnostics.checkmake,
 			formatting.prettier,
 			formatting.stylua,
 			formatting.shfmt.with({ args = { "-i", "4" } }),

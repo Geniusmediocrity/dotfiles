@@ -1,28 +1,3 @@
-git_ahead_behind() {
-  local branch
-  branch=$(git symbolic-ref --short HEAD 2>/dev/null) || return
-
-  local upstream
-  upstream=$(git rev-parse --abbrev-ref "@{upstream}" 2>/dev/null) || return
-
-  local counts
-  counts=$(git rev-list --left-right --count "${upstream}"...HEAD 2>/dev/null) || return
-
-  local behind=${${(s:\t:)counts}[1]}
-  local ahead=${${(s:\t:)counts}[2]}
-
-  local out=""
-  if (( ahead > 0 )); then
-    out+="%F{green}${ahead}%f"
-  fi
-  if (( behind > 0 )); then
-    [[ -n "$out" ]] && out+=" "
-    out+="%F{red}${behind}%f"
-  fi
-
-  [[ -n "$out" ]] && echo " %F{magenta}${out}%f"
-}
-
 git_status_verbose() {
   local git_status_output=$(git status --porcelain=v1 2>/dev/null)
   [[ -z "$git_status_output" ]] && return
@@ -54,7 +29,7 @@ git_status_verbose() {
 
 # the svn plugin has to be activated for this to work.
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
-PROMPT='${ret_status}%{$fg_bold[green]%} %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(git_ahead_behind)$(git_status_verbose)%{$fg_bold[blue]%}$(svn_prompt_info)%{$reset_color%}  '
+PROMPT='${ret_status}%{$fg_bold[green]%} %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(git_status_verbose)%{$fg_bold[blue]%}$(svn_prompt_info)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" 󰊢 git:( %{$fg[red]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

@@ -1,8 +1,7 @@
 return {
 	"vi013t/easycolor.nvim",
 	dependencies = { "stevearc/dressing.nvim" }, -- Optional, but provides better UI for editing the formatting template
-	opts = {},
-	config = {
+	opts = {
 		ui = {
 			border = "rounded", -- Border style of the window
 			symbols = {

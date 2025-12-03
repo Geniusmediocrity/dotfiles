@@ -234,8 +234,30 @@ return {
 				},
 
 				-- Bash
-				bashls = {},
-				shfmt = {},
+				bashls = {
+					filetypes = { "shell", "bash" },
+					settings = {
+						backgroundAnalysisMaxFiles = 700,
+						enableSourceErrorDiagnostics = true,
+						explainshellEndpoint = "",
+						globPattern = "**/*@(.sh|.inc|.bash|.command)",
+						includeAllWorkspaceSymbols = true,
+						logLevel = "info",
+						shellcheckArguments = "",
+						shellcheckPath = "shellcheck",
+					},
+				},
+				shfmt = {
+					binaryNextLine = true,
+					caseIndent = true,
+					funcNextLine = false,
+					ignoreEditorconfig = false,
+					keepPadding = false,
+					languageDialect = "bash",
+					path = "shfmt",
+					simplifyCode = false,
+					spaceRedirects = false,
+				},
 
 				-- Sql
 				-- sqls = {},

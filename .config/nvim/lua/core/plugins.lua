@@ -106,4 +106,7 @@ require("lazy").setup({
 
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),
+
+	-- Translator
+	require("plugins.translator"),
 })

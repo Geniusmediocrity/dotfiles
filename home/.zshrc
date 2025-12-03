@@ -117,6 +117,9 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+# Get all environment keys for nvim
+source /etc/environment
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -254,3 +257,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+. "/home/alexey/.deno/env"

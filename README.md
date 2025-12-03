@@ -1,70 +1,76 @@
 # Dot-files
 
-_The **\<user\>** template means your user's name_
-
-## Where to which files these links refer to
-
-🖿 `/home/\<user\>/.tmux` -> `.tmux`
-
-🖿 `/home/\<user\>/.tmux.conf.local` -> `.tmux.conf.local`
-
-#! `/home/\<user\>/.zshrc` -> `.zshrc`
-
-🖿 `/home/\<user\>/.config/alacritty` -> `alacritty`
-
-🖿 `/home/\<user\>/.config/htop` -> `htop`
-
-🖿 `/home/\<user\>/.config/neofetch` -> `neofetch`
-
-🖿 `/home/\<user\>/.config/nvim` -> `nvim`
-
-🖿 `/home/\<user\>/.vim` -> `.vim`
-
-🖿 `/home/\<user\>/.config/procps` -> `procps`
-
 ## Fonts
 
 In terminals such as alacritty or wezterm I use Dank Mono Nerd Font. You can install it <a href="https://eng.fontke.com/search/font/Dank%20Mono/">here</a> or you can use your own font.
 
+---
+
 ## Script:
 
-### sync_dotfiles – Dotfile Synchronization Script
+### `link_configs.sh` – Configs Synchronization Script
 
 #### Description
 
-This script is designed to automatically synchronize configuration files from the `~/dotfiles` directory by creating symbolic links to them in appropriate system locations. It helps manage personal configuration files (dotfiles) in a centralized way, ideal for version control using Git.
+> A simple, safe, and transparent script to symlink dotfiles from `~/dotfiles`.
 
-#### Purpose
+Synchronizes your configurations across machines with predictable behavior:  
+📁 `~/dotfiles/home/` → `~/`  
+📁 `~/dotfiles/.config/` → `~/.config/`
 
-- Centralize and manage dotfiles in one place.
-- Automate symlink creation for easy deployment.
-- Keep system configs consistent and clean.
-- Facilitate dotfile management through a Git repository.
+#### Features
 
-#### What the script does:
+- **Safe by default**:  
+  — Never overwrites regular files or directories.  
+  — Only updates _symbolic links_ — and only with `--force`.
+- **`--dry-run` mode**: preview changes without modifying your system.
+- **Colored output**: clearly shows linked, skipped, or existing items.
+- Handles nested structures:  
+  `~/dotfiles/.config/nvim/init.lua` → `~/.config/nvim/init.lua`
+- Zero dependencies: pure POSIX-compatible shell (works in `bash`/`zsh`). No `stow`, no Python.
 
-1. **Creates symbolic links** for all files in `~/dotfiles`, except those listed in the ignore list.
-   - Files specified in `HOME_TARGET_ITEMS` are symlinked into the home directory (`~`).
+#### Expected `~/dotfiles` Layout
 
-   - All other files are symlinked into `~/.config`.
+The script assumes this structure:
 
-2. **Checks `~/.config contents`:**
-   - If a file/directory is not a symlink:
-     - If it exists in `~/dotfiles`, it's removed locally and re-linked.
-     - If it doesn't exist in `~/dotfiles`, it's moved there and linked.
-3. **Ignores specific files** like `README.md`, .git and `sync_dotfiles.sh`.
+```
+~/dotfiles/
+├── home/ # → ~/
+│ ├── ...
+│ ├── ...
+│ └── ...
+│
+└── .config/ # → ~/.config/
+│ ├── ...
+│ ├── ...
+│ └── ...
+│
+├── link_configs.sh
+├── install_packages.sh
+├── ...
+└── ...
+```
 
 #### How to use:
 
-1. Save the script as `~/bin/sync_dotfiles`
+1. Save the script as `~/dotfiles/link_configs`
 2. Make it executable:
    ```bash
-   chmod +x ~/bin/sync_dotfiles
+   chmod +x ~/dotfiles/link_configs
    ```
 3. Run it:
    ```zsh
-   sync_dotfiles
+   ./link_configs.sh
    ```
+
+#### Options:
+
+| Option               | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| `-h`, `--help`       | Show help                                               |
+| `-v`, `--version`    | Show version                                            |
+| `-n`, `--dry-run`    | Preview mode — show what would be linked (no changes)   |
+| `-f`, `--force Skip` | confirmation and overwrite existing symbolic links only |
 
 **These script mean that the dotfiles directory is located along the path `~/dotfiles`, which contains these scripts.**
 

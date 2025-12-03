@@ -35,7 +35,7 @@
 return {
 	"numToStr/Comment.nvim",
 	event = "VimEnter",
-	config = {
+	opts = {
 		---Add a space b/w comment and the line
 		padding = true,
 		---Whether the cursor should stay at its position

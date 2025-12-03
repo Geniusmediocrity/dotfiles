@@ -5,7 +5,6 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 		opt = {
-			port = 5500,
 			browser = "default",
 
 			-- If true, the root directory of the server will be the parent
@@ -24,5 +23,14 @@ return {
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 		ft = { "markdown" },
+	},
+	{
+		"toppair/peek.nvim",
+		build = "deno task --quiet build:fast",
+		config = function()
+			require("peek").setup()
+			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+		end,
 	},
 }

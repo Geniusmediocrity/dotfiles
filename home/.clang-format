@@ -8,7 +8,7 @@ UseTab: Always
 # Allows
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: None
+AllowShortFunctionsOnASingleLine: true
 AllowShortLambdasOnASingleLine: None
 
 # Key settings for arrays and initialization lists
@@ -33,7 +33,7 @@ BraceWrapping:
 AccessModifierOffset: -2
 
 # Indents
-IndentCaseLabels: false
+IndentCaseLabels: true
 IndentPPDirectives: AfterHash
 
 # Miscellaneous

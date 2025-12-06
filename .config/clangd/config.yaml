@@ -1,0 +1,20 @@
+CompileFlags:
+  Add:
+    - -Wall
+    - -Wextra
+    - -std=c++23
+    - -I.
+    - -I../inc
+    - -I../include
+
+Style:
+  QuotedHeaders: ".*[/\\](inc|include)[/\\].*"
+
+InlayHints:
+  BlockEnd: true
+  Designators: true
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  DefaultArguments: true
+  TypeNameLimit: 24

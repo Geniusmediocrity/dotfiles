@@ -200,7 +200,16 @@ return {
 				asm_lsp = {},
 
 				-- C/C++
-				clangd = {},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--enable-config",
+						"--background-index",
+						"--clang-tidy",
+						"--header-insertion=iwyu",
+						"--cross-file-rename",
+					},
+				},
 				clang_format = {},
 				cpplint = {},
 				codelldb = {},

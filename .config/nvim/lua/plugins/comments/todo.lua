@@ -7,7 +7,6 @@ return {
 		require("todo-comments").setup(opts)
 	end,
 	keys = {
-		{ "<leader>tt", "<cmd>TodoTrouble<cr>",   desc = "TODOs (Trouble)" },
-		{ "<leader>st", "<cmd>TodoTelescope<cr>", desc = "TODOs (Telescope)" },
+		{ "<leader>T", "<cmd>TodoTelescope<cr>", desc = "TODOs (Telescope)" },
 	},
 }

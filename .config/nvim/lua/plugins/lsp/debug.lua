@@ -219,20 +219,20 @@ return {
 				justMyCode = true, -- If false very usefull to debug third-party code
 			},
 		}
-		dap.configurations.cpp = {
-			{
-				name = "Launch",
-				type = "codelldb",
-				request = "launch",
-				program = function()
-					-- Get filename without extension(i.e.: main.cpp -> main)
-					local filename = vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")
-					return "./build/debug/" .. filename .. ".elf"
-				end,
-				cwd = "${workspaceFolder}",
-				stopOnEntry = false,
-				args = {},
-			},
-		}
+		-- dap.configurations.cpp = {
+		-- 	{
+		-- 		name = "Launch",
+		-- 		type = "codelldb",
+		-- 		request = "launch",
+		-- 		program = function()
+		-- 			-- Get filename without extension(i.e.: main.cpp -> main)
+		-- 			local filename = vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")
+		-- 			return "./build/debug/" .. filename .. ".elf"
+		-- 		end,
+		-- 		cwd = "${workspaceFolder}",
+		-- 		stopOnEntry = false,
+		-- 		args = {},
+		-- 	},
+		-- }
 	end,
 }

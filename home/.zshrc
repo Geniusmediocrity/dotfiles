@@ -161,10 +161,10 @@ export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 
 # --- Ncdu (better du) ---
-alias du="ncdu"
+# alias du="ncdu"
 
 # --- Dysk (better df) ---
-alias df="dysk"
+# alias df="dysk"
 
 
 # === === Yazi setup === ===

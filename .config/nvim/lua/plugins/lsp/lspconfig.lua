@@ -203,11 +203,18 @@ return {
 				clangd = {
 					cmd = {
 						"clangd",
+						"--experimental-modules-support",
+						"--log=error",
 						"--enable-config",
 						"--background-index",
 						"--clang-tidy",
 						"--header-insertion=iwyu",
 						"--cross-file-rename",
+						"--background-index",
+						"--all-scopes-completion",
+						"--pch-storage=memory",
+						"--completion-style=detailed",
+						"--index-file=global",
 					},
 				},
 				clang_format = {},

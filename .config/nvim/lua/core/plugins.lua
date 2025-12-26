@@ -28,9 +28,6 @@ require("lazy").setup({
 	-- Telescope (Fuzzy Finder)
 	require("plugins.telescope"),
 
-	-- A pretty list for showing diagnostics, references, telescope results, quickfix and location lists to help you solve all the trouble your code is causing.
-	require("plugins.trouble"),
-
 	-- Bufferline -- turns buffers(on the top of the screen in nvim) to tabs
 	require("plugins.bufferline"),
 
@@ -44,7 +41,7 @@ require("lazy").setup({
 	require("plugins.themes"),
 
 	-- Pretty cursor animated
-	-- require("plugins.smear_cursor"),
+	require("plugins.smear_cursor"),
 
 	-- Vim Tmux Navigator
 	require("plugins.vim_tmux_navigator"),
@@ -54,9 +51,6 @@ require("lazy").setup({
 
 	-- Lualine configuration
 	require("plugins.lualine"),
-
-	-- A collection of small QoL plugins for Neovim.
-	require("plugins.snacks"),
 
 	-- Fast code navigating
 	require("plugins.flush"),
@@ -106,7 +100,4 @@ require("lazy").setup({
 
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),
-
-	-- Translator
-	require("plugins.translator"),
 })

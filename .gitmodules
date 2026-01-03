@@ -1,3 +1,6 @@
 [submodule "home/.tmux/plugins/tmux-continuum"]
 	path = home/.tmux/plugins/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum
+[submodule "misc/Games/DOOM_wads"]
+	path = misc/Games/DOOM_wads
+	url = https://github.com/Akbar30Bill/DOOM_wads

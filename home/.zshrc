@@ -90,6 +90,7 @@ plugins=(
 	z
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+	zsh-autocomplete
 	pip
 	python
 	uv
@@ -250,11 +251,12 @@ export PATH=~/.npm-global/bin:$PATH
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/awesomepanda.zsh-theme
 
-# pnpm
-export PNPM_HOME="/home/alexey/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-. "/home/alexey/.deno/env"
+# === zsh-autocomplete key bindings ===
+# This makes Tab and ShiftTab move the selection in the menu right and left, respectively, instead of exiting the menu:
+bindkey              '^I'         menu-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
+
+# This makes ← and → always move the cursor on the command line, even when you are in the menu:
+bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+# read documentation here: https://github.com/marlonrichert/zsh-autocomplete?tab=readme-ov-file#keyboard-shortcuts

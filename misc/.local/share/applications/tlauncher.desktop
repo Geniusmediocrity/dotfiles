@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=TLauncher
+Comment=Minecraft Launcher (Java-based)
+Exec=java -jar /home/alexey/Games/TLauncher/TLauncher.jar
+Icon=/home/alexey/Games/TLauncher/tlauncher.png
+Terminal=false
+Type=Application
+Categories=Game;Utility;
+StartupWMClass=org-tlauncher-tlauncher-rmo-TLauncher

@@ -30,6 +30,7 @@ eza
 fastfetch
 fd
 file-roller
+firefox
 fmt
 fprintd
 fzf
@@ -79,6 +80,7 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
+htop
 jdk8-openjdk
 jre8-openjdk
 jre8-openjdk-headless
@@ -107,8 +109,10 @@ otf-font-awesome
 pacman-contrib
 papers
 papirus-icon-theme
+pass
 pipewire
 pipewire-pulse
+plocate
 pnpm
 postgresql
 power-profiles-daemon

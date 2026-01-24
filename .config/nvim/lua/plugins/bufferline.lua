@@ -1,27 +1,29 @@
 return {
-	'akinsho/bufferline.nvim',
-	version = '*',
-	dependencies = 'nvim-tree/nvim-web-devicons',
+	"akinsho/bufferline.nvim",
+	version = "*",
+	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
-		require('bufferline').setup {
+		require("bufferline").setup({
 			options = {
 				buffer_close_icon = "",
-				mode = 'tabs',
-				separator_style = 'slope',
+				mode = "tabs",
+				separator_style = "slope",
 				indicator = {
 					style = "underline",
 				},
-				hover = {
-					enabled = true,
-					delay = 150,
-					reveal = { 'close' }
-				},
+				-- hover = {
+				-- 	enabled = true,
+				-- 	delay = 150,
+				-- 	reveal = { "close" },
+				-- },
 				always_show_bufferline = true,
 				show_close_icon = false,
-				show_buffer_close_icons = true,
+				show_buffer_close_icons = false,
 				diagnostics = "nvim_lsp",
 				diagnostics_indicator = function(count, level, diagnostics_dict, context)
-					if not context.buffer then return "" end
+					if not context.buffer then
+						return ""
+					end
 
 					local s = " "
 
@@ -47,10 +49,10 @@ return {
 					bold = false,
 				},
 				error_selected = {
-					bold = false
+					bold = false,
 				},
 				warning_selected = {
-					bold = false
+					bold = false,
 				},
 				diagnostic_selected = {
 					bold = false,
@@ -60,8 +62,8 @@ return {
 				},
 				info_selected = {
 					bold = false,
-				}
-			}
-		}
-    end,
+				},
+			},
+		})
+	end,
 }

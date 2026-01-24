@@ -23,6 +23,7 @@ config.keys = {
 	{ key = "v", mods = "CTRL|SHIFT", action = act.Nop },
 	{ key = "l", mods = "CTRL|SHIFT", action = act.Nop },
 
+	-- === Tabs ===
 	{
 		brief = "Spawn New Tab",
 		key = "n",
@@ -51,12 +52,52 @@ config.keys = {
 		action = act.ActivateTabRelative(1),
 	},
 
+	-- === Panes ===
 	{
-		brief = "Map CapsLock to Left Control",
-		key = "CapsLock",
-		action = act.SendKey({ key = "LeftControl" }),
+		brief = "Spawn New Horizontal Pain",
+		key = "g",
+		mods = "CTRL|SHIFT",
+		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 
+	{
+		brief = "Spawn New Vertical Pain",
+		key = "v",
+		mods = "CTRL|SHIFT",
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+
+	{
+		key = "h",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivatePaneDirection = "Left" }),
+	},
+
+	{
+		key = "l",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivatePaneDirection = "Right" }),
+	},
+
+	{
+		key = "k",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivatePaneDirection = "Up" }),
+	},
+
+	{
+		key = "j",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action({ ActivatePaneDirection = "Down" }),
+	},
+
+	{
+		key = "C",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.CloseCurrentPane({ confirm = false }),
+	},
+
+	-- === Misc ===
 	{
 		brief = "Delete word forward (CTRL + Delete)",
 		key = "Delete",

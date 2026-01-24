@@ -160,7 +160,7 @@ wheel_scroll_min_lines 3
 #: when using the wheel. With a negative number, the minimum number of
 #: lines will always be added.
 
-touch_scroll_multiplier 3.0
+# touch_scroll_multiplier 1.0
 
 #: Multiplier for the number of lines scrolled by a touchpad. Note
 #: that this is only used for high precision scrolling devices on
@@ -306,13 +306,14 @@ window_alert_on_bell yes
 
 #: }}}
 
-#: Window layout {{{{{{{{{
+#: Window layout {{{
 
 # remember_window_size  yes
 # initial_window_width  640
 # initial_window_height 400
 
 remember_window_position yes
+
 
 # window_border_width 0.5pt
 
@@ -413,7 +414,7 @@ hide_window_decorations yes
 #: placement_strategy to prevent the rounded corners from clipping
 #: text. Or use titlebar-and-corners.
 #
-#: }}}}}}}}}
+#: }}}
 
 #: Tab bar {{{
 
@@ -1172,9 +1173,125 @@ notify_on_cmd_finish invisible
 
 #: }}}
 
-#: Keyboard shortcuts {{{
+#: OS specific tweaks {{{
 
-kitty_mod ctrl+shift
+# wayland_titlebar_color system
+
+#: The color of the kitty window's titlebar on Wayland systems with
+#: client side window decorations such as GNOME. A value of system
+#: means to use the default system colors, a value of background means
+#: to use the background color of the currently active kitty window
+#: and finally you can use an arbitrary color, such as #12af59 or red.
+
+# macos_titlebar_color system
+
+#: The color of the kitty window's titlebar on macOS. A value of
+#: system means to use the default system color, light or dark can
+#: also be used to set it explicitly. A value of background means to
+#: use the background color of the currently active window and finally
+#: you can use an arbitrary color, such as #12af59 or red.
+
+# macos_option_as_alt no
+
+#: Use the Option key as an Alt key on macOS. With this set to no,
+#: kitty will use the macOS native Option+Key to enter Unicode
+#: character behavior. This will break any Alt+Key keyboard shortcuts
+#: in your terminal programs, but you can use the macOS Unicode input
+#: technique. You can use the values: left, right or both to use only
+#: the left, right or both Option keys as Alt, instead. Note that
+#: kitty itself always treats Option the same as Alt. This means you
+#: cannot use this option to configure different kitty shortcuts for
+#: Option+Key vs. Alt+Key. Also, any kitty shortcuts using
+#: Option/Alt+Key will take priority, so that any such key presses
+#: will not be passed to terminal programs running inside kitty.
+#: Changing this option by reloading the config is not supported.
+
+# macos_hide_from_tasks no
+
+#: Hide the kitty window from running tasks on macOS (⌘+Tab and the
+#: Dock). Changing this option by reloading the config is not
+#: supported.
+
+# macos_quit_when_last_window_closed no
+
+#: Have kitty quit when all the top-level windows are closed on macOS.
+#: By default, kitty will stay running, even with no open windows, as
+#: is the expected behavior on macOS.
+
+# macos_window_resizable yes
+
+#: Disable this if you want kitty top-level OS windows to not be
+#: resizable on macOS.
+
+# macos_thicken_font 0
+
+#: Draw an extra border around the font with the given width, to
+#: increase legibility at small font sizes on macOS. For example, a
+#: value of 0.75 will result in rendering that looks similar to sub-
+#: pixel antialiasing at common font sizes. Note that in modern kitty,
+#: this option is obsolete (although still supported). Consider using
+#: text_composition_strategy instead.
+
+# macos_traditional_fullscreen no
+
+#: Use the macOS traditional full-screen transition, that is faster,
+#: but less pretty.
+
+# macos_show_window_title_in all
+
+#: Control where the window title is displayed on macOS. A value of
+#: window will show the title of the currently active window at the
+#: top of the macOS window. A value of menubar will show the title of
+#: the currently active window in the macOS global menu bar, making
+#: use of otherwise wasted space. A value of all will show the title
+#: in both places, and none hides the title. See
+#: macos_menubar_title_max_length for how to control the length of the
+#: title in the menu bar.
+
+# macos_menubar_title_max_length 0
+
+#: The maximum number of characters from the window title to show in
+#: the macOS global menu bar. Values less than one means that there is
+#: no maximum limit.
+
+# macos_custom_beam_cursor no
+
+#: Use a custom mouse cursor for macOS that is easier to see on both
+#: light and dark backgrounds. Nowadays, the default macOS cursor
+#: already comes with a white border. WARNING: this might make your
+#: mouse cursor invisible on dual GPU machines. Changing this option
+#: by reloading the config is not supported.
+
+# macos_colorspace srgb
+
+#: The colorspace in which to interpret terminal colors. The default
+#: of srgb will cause colors to match those seen in web browsers. The
+#: value of default will use whatever the native colorspace of the
+#: display is. The value of displayp3 will use Apple's special
+#: snowflake display P3 color space, which will result in over
+#: saturated (brighter) colors with some color shift. Reloading
+#: configuration will change this value only for newly created OS
+#: windows.
+
+# linux_display_server auto
+
+#: Choose between Wayland and X11 backends. By default, an appropriate
+#: backend based on the system state is chosen automatically. Set it
+#: to x11 or wayland to force the choice. Changing this option by
+#: reloading the config is not supported.
+
+# wayland_enable_ime yes
+
+#: Enable Input Method Extension on Wayland. This is typically used
+#: for inputting text in East Asian languages. However, its
+#: implementation in Wayland is often buggy and introduces latency
+#: into the input loop, so disable this if you know you dont need it.
+#: Changing this option by reloading the config is not supported, it
+#: will not have any effect.
+
+#: }}}
+
+#: Keyboard shortcuts {{{
 
 #: Keys are identified simply by their lowercase Unicode characters.
 #: For example: a for the A key, [ for the left square bracket key,
@@ -1184,109 +1301,215 @@ kitty_mod ctrl+shift
 #: For modifier keys, the names are ctrl (control, ⌃), shift (⇧), alt
 #: (opt, option, ⌥), super (cmd, command, ⌘).
 
-#: User shortcuts {{{
+#: Simple shortcut mapping is done with the map directive. For full
+#: details on advanced mapping including modal and per application
+#: maps, see mapping <https://sw.kovidgoyal.net/kitty/mapping/>. Some
+#: quick examples to illustrate common tasks::
 
-# === Clipboard (Ctrl+C / Ctrl+V) ===
+#:     # unmap a keyboard shortcut, passing it to the program running in kitty
+#:     map kitty_mod+space
+#:     # completely ignore a keyboard event
+#:     map ctrl+alt+f1 discard_event
+#:     # combine multiple actions
+#:     map kitty_mod+e combine : new_window : next_layout
+#:     # multi-key shortcuts
+#:     map ctrl+x>ctrl+y>z action
 
-map ctrl+c copy_to_clipboard
-map ctrl+v paste_from_clipboard
+#: The full list of actions that can be mapped to key presses is
+#: available here <https://sw.kovidgoyal.net/kitty/actions/>.
 
-unmap kitty_mod+c
-map kitty_mod+v
-ununmap kitty_mod+l
+# kitty_mod ctrl+shift
 
-# === Tabs ===
-map kitty_mod+n new_tab
-map alt+shift+9 last_tab
-map alt+[ previous_tab
-map alt+] next_tab
-
-map kitty_mod+1 goto_tab 1
-map kitty_mod+2 goto_tab 2
-map kitty_mod+3 goto_tab 3
-map kitty_mod+4 goto_tab 4
-map kitty_mod+5 goto_tab 5
-map kitty_mod+6 goto_tab 6
-map kitty_mod+7 goto_tab 7
-map kitty_mod+8 goto_tab 8
-
-# === Panes (Splits) ===
-map kitty_mod+g launch --location=hsplit
-map kitty_mod+v launch --location=vsplit
-
-map kitty_mod+h neighboring_window left
-map kitty_mod+l neighboring_window right
-map kitty_mod+k neighboring_window up
-map kitty_mod+j neighboring_window down
-
-map kitty_mod+c close_window
-
-# === Misc ===
-#: Delete word forward (Ctrl+Delete)
-map ctrl+delete send_text all \x1b[3;5~
-
-#: Delete word backward (Ctrl+Backspace)
-map ctrl+backspace send_text all \x17
-
-#: Kill current process (kitty_mod+Q → sends Ctrl+C's code)
-map kitty_mod+q send_text all \x03
-
-#: }}}
-
+#: Special modifier key alias for default shortcuts. You can change
+#: the value of this option to alter all default shortcuts that use
+#: kitty_mod.
 
 # clear_all_shortcuts no
 
 #: Remove all shortcut definitions up to this point. Useful, for
 #: instance, to remove the default shortcuts.
 
+# action_alias
+
+#: E.g. action_alias launch_tab launch --type=tab --cwd=current
+
+#: Define action aliases to avoid repeating the same options in
+#: multiple mappings. Aliases can be defined for any action and will
+#: be expanded recursively. For example, the above alias allows you to
+#: create mappings to launch a new tab in the current working
+#: directory without duplication::
+
+#:     map f1 launch_tab vim
+#:     map f2 launch_tab emacs
+
+#: Similarly, to alias kitten invocation::
+
+#:     action_alias hints kitten hints --hints-offset=0
+
+# kitten_alias
+
+#: E.g. kitten_alias hints hints --hints-offset=0
+
+#: Like action_alias above, but specifically for kittens. Generally,
+#: prefer to use action_alias. This option is a legacy version,
+#: present for backwards compatibility. It causes all invocations of
+#: the aliased kitten to be substituted. So the example above will
+#: cause all invocations of the hints kitten to have the --hints-
+#: offset=0 option applied.
+
+#: Clipboard {{{
+
+#: Copy to clipboard
+
+# map kitty_mod+c copy_to_clipboard
+
+#::  There is also a copy_or_interrupt action that can be optionally
+#::  mapped to Ctrl+C. It will copy only if there is a selection and
+#::  send an interrupt otherwise. Similarly,
+#::  copy_and_clear_or_interrupt will copy and clear the selection or
+#::  send an interrupt if there is no selection. The copy_or_noop
+#::  action will copy if there is a selection and pass the key through
+#::  to the application running in the terminal if there is no
+#::  selection.
+
+#: Copy to clipboard or pass through
+
+# map cmd+c copy_or_noop
+
+#: Paste from clipboard
+
+# map kitty_mod+v paste_from_clipboard
+# map cmd+v       paste_from_clipboard
+
+#: Paste from selection
+
+# map kitty_mod+s  paste_from_selection
+# map shift+insert paste_from_selection
+
+#: Pass selection to program
+
+# map kitty_mod+o pass_selection_to_program
+
+#::  You can also pass the contents of the current selection to any
+#::  program with pass_selection_to_program. By default, the system's
+#::  open program is used, but you can specify your own, the selection
+#::  will be passed as a command line argument to the program. For
+#::  example::
+
+#::      map kitty_mod+o pass_selection_to_program firefox
+
+#::  You can pass the current selection to a terminal program running
+#::  in a new kitty window, by using the @selection placeholder::
+
+#::      map kitty_mod+y new_window less @selection
+
+#: }}}
 
 #: Scrolling {{{
 
 #: Scroll line up
 
-map kitty_mod+up    scroll_line_up
-map kitty_mod+k     scroll_line_up
+# map kitty_mod+up    scroll_line_up
+# map kitty_mod+k     scroll_line_up
 # map opt+cmd+page_up scroll_line_up
 # map cmd+up          scroll_line_up
 
 #: Scroll line down
 
-map kitty_mod+down    scroll_line_down
-map kitty_mod+j       scroll_line_down
+# map kitty_mod+down    scroll_line_down
+# map kitty_mod+j       scroll_line_down
 # map opt+cmd+page_down scroll_line_down
 # map cmd+down          scroll_line_down
 
 #: Scroll page up
 
-map kitty_mod+page_up scroll_page_up
+# map kitty_mod+page_up scroll_page_up
 # map cmd+page_up       scroll_page_up
 
 #: Scroll page down
 
-map kitty_mod+page_down scroll_page_down
+# map kitty_mod+page_down scroll_page_down
 # map cmd+page_down       scroll_page_down
 
 #: Scroll to top
 
-map kitty_mod+home scroll_home
+# map kitty_mod+home scroll_home
 # map cmd+home       scroll_home
 
 #: Scroll to bottom
 
-map kitty_mod+end scroll_end
+# map kitty_mod+end scroll_end
 # map cmd+end       scroll_end
 
 #: Scroll to previous shell prompt
-map ctrl+shift+z scroll_to_prompt -1
+
+# map kitty_mod+z scroll_to_prompt -1
+
+#::  Use a parameter of 0 for scroll_to_prompt to scroll to the last
+#::  jumped to or the last clicked position. Requires shell
+#::  integration <https://sw.kovidgoyal.net/kitty/shell-integration/>
+#::  to work.
+
+#: Scroll to next shell prompt
+
+# map kitty_mod+x scroll_to_prompt 1
 
 #: Browse scrollback buffer in pager
-map ctrl+h show_scrollback
+
+# map kitty_mod+h show_scrollback
+
+#::  You can pipe the contents of the current screen and history
+#::  buffer as STDIN to an arbitrary program using launch --stdin-
+#::  source. For example, the following opens the scrollback buffer in
+#::  less in an overlay window::
+
+#::      map f1 launch --stdin-source=@screen_scrollback --stdin-add-formatting --type=overlay less +G -R
+
+#::  For more details on piping screen and buffer contents to external
+#::  programs, see launch <https://sw.kovidgoyal.net/kitty/launch/>.
 
 #: Browse output of the last shell command in pager
-map ctrl+o show_last_command_output
+
+# map kitty_mod+g show_last_command_output
+
+#::  You can also define additional shortcuts to get the command
+#::  output. For example, to get the first command output on screen::
+
+#::      map f1 show_first_command_output_on_screen
+
+#::  To get the command output that was last accessed by a keyboard
+#::  action or mouse action::
+
+#::      map f1 show_last_visited_command_output
+
+#::  You can pipe the output of the last command run in the shell
+#::  using the launch action. For example, the following opens the
+#::  output in less in an overlay window::
+
+#::      map f1 launch --stdin-source=@last_cmd_output --stdin-add-formatting --type=overlay less +G -R
+
+#::  To get the output of the first command on the screen, use
+#::  @first_cmd_output_on_screen. To get the output of the last jumped
+#::  to command, use @last_visited_cmd_output.
+
+#::  Requires shell integration
+#::  <https://sw.kovidgoyal.net/kitty/shell-integration/> to work.
 
 #: Search the scrollback within a pager
-map kitty_mod+/ search_scrollback
+
+# map kitty_mod+/ search_scrollback
+# map cmd+f       search_scrollback
+
+#::  Search for currently selected text in the scrollback using the
+#::  configured scrollback_pager. Assumes that pressing the / key
+#::  triggers search mode in the pager. If you want to create a manual
+#::  mapping with a special pager for this, you can use something
+#::  like:
+
+#::      map f1 combine : launch --stdin-source=@screen_scrollback --stdin-add-formatting --type=overlay mypager : send_key /
+
+#::  For more sophisticated control, such as using the current
+#::  selection, use remote_control_script.
 
 #: }}}
 
@@ -1433,42 +1656,84 @@ map kitty_mod+/ search_scrollback
 
 #: Next tab
 
-unmap kitty_mod+right next_tab
-unmap shift+cmd+]     next_tab
-unmap ctrl+tab        next_tab
+# map kitty_mod+right next_tab
+# map shift+cmd+]     next_tab
+# map ctrl+tab        next_tab
 
 #: Previous tab
 
-unmap kitty_mod+left previous_tab
-unmap shift+cmd+[    previous_tab
-unmap kitty_mod+tab previous_tab
+# map kitty_mod+left previous_tab
+# map shift+cmd+[    previous_tab
+# map ctrl+shift+tab previous_tab
 
 #: New tab
 
-map kitty_mod+t new_tab
+# map kitty_mod+t new_tab
+# map cmd+t       new_tab
 
 #: Close tab
 
-map kitty_mod+q close_tab
+# map kitty_mod+q close_tab
 # map cmd+w       close_tab
 
 #: Close OS window
 
-unmap shift+cmd+w
+# map shift+cmd+w close_os_window
 
 #: Move tab forward
 
-map kitty_mod+. move_tab_forward
+# map kitty_mod+. move_tab_forward
 
 #: Move tab backward
 
-map kitty_mod+, move_tab_backward
+# map kitty_mod+, move_tab_backward
 
 #: Set tab title
 
-map kitty_mod+alt+t set_tab_title
+# map kitty_mod+alt+t set_tab_title
 # map shift+cmd+i     set_tab_title
 
+
+#: You can also create shortcuts to go to specific tabs, with 1 being
+#: the first tab, 2 the second tab and -1 being the previously active
+#: tab, -2 being the tab active before the previously active tab and
+#: so on. Any number larger than the number of tabs goes to the last
+#: tab and any number less than the number of previously used tabs in
+#: the history goes to the oldest previously used tab in the history::
+
+#:     map ctrl+alt+1 goto_tab 1
+#:     map ctrl+alt+2 goto_tab 2
+
+#: Just as with new_window above, you can also pass the name of
+#: arbitrary commands to run when using new_tab and new_tab_with_cwd.
+#: Finally, if you want the new tab to open next to the current tab
+#: rather than at the end of the tabs list, use::
+
+#:     map ctrl+t new_tab !neighbor [optional cmd to run]
+#: }}}
+
+#: Layout management {{{
+
+#: Next layout
+
+# map kitty_mod+l next_layout
+
+
+#: You can also create shortcuts to switch to specific layouts::
+
+#:     map ctrl+alt+t goto_layout tall
+#:     map ctrl+alt+s goto_layout stack
+
+#: Similarly, to switch back to the previous layout::
+
+#:     map ctrl+alt+p last_used_layout
+
+#: There is also a toggle_layout action that switches to the named
+#: layout or back to the previous layout if in the named layout.
+#: Useful to temporarily "zoom" the active window by switching to the
+#: stack layout::
+
+#:     map ctrl+alt+z toggle_layout stack
 #: }}}
 
 #: Font sizes {{{
@@ -1478,28 +1743,39 @@ map kitty_mod+alt+t set_tab_title
 
 #: Increase font size
 
-map kitty_mod+equal  change_font_size all +2.0
-map kitty_mod+plus   change_font_size all +2.0
-map kitty_mod+kp_add change_font_size all +2.0
+# map kitty_mod+equal  change_font_size all +2.0
+# map kitty_mod+plus   change_font_size all +2.0
+# map kitty_mod+kp_add change_font_size all +2.0
 # map cmd+plus         change_font_size all +2.0
 # map cmd+equal        change_font_size all +2.0
 # map shift+cmd+equal  change_font_size all +2.0
 
 #: Decrease font size
 
-map kitty_mod+minus       change_font_size all -2.0
-map kitty_mod+kp_subtract change_font_size all -2.0
+# map kitty_mod+minus       change_font_size all -2.0
+# map kitty_mod+kp_subtract change_font_size all -2.0
 # map cmd+minus             change_font_size all -2.0
 # map shift+cmd+minus       change_font_size all -2.0
 
 #: Reset font size
 
-map kitty_mod+backspace change_font_size all 0
+# map kitty_mod+backspace change_font_size all 0
 # map cmd+0               change_font_size all 0
 
 
 #: To setup shortcuts for specific font sizes::
 
+#:     map kitty_mod+f6 change_font_size all 10.0
+
+#: To setup shortcuts to change only the current OS window's font
+#: size::
+
+#:     map kitty_mod+f6 change_font_size current 10.0
+
+#: To setup shortcuts to multiply/divide the font size::
+
+#:     map kitty_mod+f6 change_font_size all *2.0
+#:     map kitty_mod+f6 change_font_size all /2.0
 #: }}}
 
 #: Select and act on visible text {{{
@@ -1590,23 +1866,65 @@ map kitty_mod+backspace change_font_size all 0
 
 #: Show documentation
 
-map kitty_mod+f1 show_kitty_doc overview
+# map kitty_mod+f1 show_kitty_doc overview
+
+#: Toggle fullscreen
+
+# map kitty_mod+f11 toggle_fullscreen
+# map ctrl+cmd+f    toggle_fullscreen
+
+#: Toggle maximized
+
+# map kitty_mod+f10 toggle_maximized
+
+#: Toggle macOS secure keyboard entry
+
+# map opt+cmd+s toggle_macos_secure_keyboard_entry
+
+#: macOS Cycle through OS Windows
+
+# map cmd+` macos_cycle_through_os_windows
+
+#: macOS Cycle through OS Windows backwards
+
+# map cmd+shift+` macos_cycle_through_os_windows_backwards
+
+#: Unicode input
+
+# map kitty_mod+u    kitten unicode_input
+# map ctrl+cmd+space kitten unicode_input
 
 #: Edit config file
 
-map kitty_mod+f2 edit_config_file
+# map kitty_mod+f2 edit_config_file
 # map cmd+,        edit_config_file
 
 #: Open the kitty command shell
 
-map kitty_mod+escape kitty_shell window
+# map kitty_mod+escape kitty_shell window
 
 #::  Open the kitty shell in a new window / tab / overlay / os_window
 #::  to control kitty using commands.
 
+#: Increase background opacity
+
+# map kitty_mod+a>m set_background_opacity +0.1
+
+#: Decrease background opacity
+
+# map kitty_mod+a>l set_background_opacity -0.1
+
+#: Make background fully opaque
+
+# map kitty_mod+a>1 set_background_opacity 1
+
+#: Reset background opacity
+
+# map kitty_mod+a>d set_background_opacity default
+
 #: Reset the terminal
 
-map kitty_mod+delete clear_terminal reset active
+# map kitty_mod+delete clear_terminal reset active
 # map opt+cmd+r        clear_terminal reset active
 
 #::  You can create shortcuts to clear/reset the terminal. For
@@ -1627,22 +1945,65 @@ map kitty_mod+delete clear_terminal reset active
 #::      # Erase the last command and its output (needs shell integration to work)
 #::      map f1 clear_terminal last_command active
 
+#::  If you want to operate on all kitty windows instead of just the
+#::  current one, use all instead of active.
+
+#::  Some useful functions that can be defined in the shell rc files
+#::  to perform various kinds of clearing of the current window:
+
+#::  .. code-block:: sh
+
+#::      clear-only-screen() {
+#::          printf "\e[H\e[2J"
+#::      }
+
+#::      clear-screen-and-scrollback() {
+#::          printf "\e[H\e[3J"
+#::      }
+
+#::      clear-screen-saving-contents-in-scrollback() {
+#::          printf "\e[H\e[22J"
+#::      }
+
+#::  For instance, using these escape codes, it is possible to remap
+#::  Ctrl+L to both scroll the current screen contents into the
+#::  scrollback buffer and clear the screen, instead of just clearing
+#::  the screen. For ZSH, in ~/.zshrc, add:
+
+#::  .. code-block:: zsh
+
+#::      ctrl_l() {
+#::          builtin print -rn -- $'\r\e[0J\e[H\e[22J' >"$TTY"
+#::          builtin zle .reset-prompt
+#::          builtin zle -R
+#::      }
+#::      zle -N ctrl_l
+#::      bindkey '^l' ctrl_l
+
+#::  Alternatively, you can just add map ctrl+l clear_terminal
+#::  to_cursor_scroll active to kitty.conf which works with no changes
+#::  to the shell rc files, but only clears up to the prompt, it does
+#::  not clear any text at the prompt itself.
+
 #: Clear to start
 
-map cmd+k clear_terminal to_cursor active
+# map cmd+k clear_terminal to_cursor active
+
+#: Clear scrollback
+
+# map option+cmd+k clear_terminal scrollback active
 
 #: Clear the last command
 
-map cmd+l clear_terminal last_command active
+# map cmd+l clear_terminal last_command active
 
 #: Clear screen
 
-map cmd+ctrl+l clear_terminal to_cursor_scroll active
+# map cmd+ctrl+l clear_terminal to_cursor_scroll active
 
 #: Reload kitty.conf
 
-map kitty_mod+f5 load_config_file
-map kitty_mod+r load_config_file
+# map kitty_mod+f5 load_config_file
 # map ctrl+cmd+,   load_config_file
 
 #::  Reload kitty.conf, applying any changes since the last time it
@@ -1652,23 +2013,72 @@ map kitty_mod+r load_config_file
 #::  bar, a full restart is needed. You can also map a keybinding to
 #::  load a different config file, for example::
 
+#::      map f5 load_config /path/to/alternative/kitty.conf
+
 #::  Note that all options from the original kitty.conf are discarded,
 #::  in other words the new configuration *replace* the old ones.
 
 #: Debug kitty configuration
 
-map kitty_mod+f6 debug_config
+# map kitty_mod+f6 debug_config
 # map opt+cmd+,    debug_config
 
 #::  Show details about exactly what configuration kitty is running
 #::  with and its host environment. Useful for debugging issues.
 
+#: Send arbitrary text on key presses
+
+#::  E.g. map ctrl+shift+alt+h send_text all Hello World
+
+#::  You can tell kitty to send arbitrary (UTF-8) encoded text to the
+#::  client program when pressing specified shortcut keys. For
+#::  example::
+
+#::      map ctrl+alt+a send_text all Special text
+
+#::  This will send "Special text" when you press the Ctrl+Alt+A key
+#::  combination. The text to be sent decodes ANSI C escapes
+#::  <https://www.gnu.org/software/bash/manual/html_node/ANSI_002dC-
+#::  Quoting.html> so you can use escapes like \e to send control
+#::  codes or \u21fb to send Unicode characters (or you can just input
+#::  the Unicode characters directly as UTF-8 text). You can use
+#::  `kitten show-key` to get the key escape codes you want to
+#::  emulate.
+
+#::  The first argument to send_text is the keyboard modes in which to
+#::  activate the shortcut. The possible values are normal,
+#::  application, kitty or a comma separated combination of them. The
+#::  modes normal and application refer to the DECCKM cursor key mode
+#::  for terminals, and kitty refers to the kitty extended keyboard
+#::  protocol. The special value all means all of them.
+
+#::  Some more examples::
+
+#::      # Output a word and move the cursor to the start of the line (like typing and pressing Home)
+#::      map ctrl+alt+a send_text normal Word\e[H
+#::      map ctrl+alt+a send_text application Word\eOH
+#::      # Run a command at a shell prompt (like typing the command and pressing Enter)
+#::      map ctrl+alt+a send_text normal,application some command with arguments\r
+
 #: Open kitty Website
 
-map kitty_mod+' open_url https://sw.kovidgoyal.net/kitty/
+# map shift+cmd+/ open_url https://sw.kovidgoyal.net/kitty/
 
-#: Open kitty Arch manual
-map kitty_mod+m open_url https://man.archlinux.org/man/kitty.conf.5
+#: Hide macOS kitty application
+
+# map cmd+h hide_macos_app
+
+#: Hide macOS other applications
+
+# map opt+cmd+h hide_macos_other_apps
+
+#: Minimize macOS window
+
+# map cmd+m minimize_macos_window
+
+#: Quit kitty
+
+# map cmd+q quit
 
 #: }}}
 

@@ -30,15 +30,17 @@ config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.94
+config.show_new_tab_button_in_tab_bar = false
+config.window_background_opacity = 0.88
 config.status_update_interval = 1000
 wezterm.on("format-tab-title", require("lua.tab_bar"))
 wezterm.on("update-right-status", require("lua.top_bar"))
 
 -- === Dim inactive panes ===
 config.inactive_pane_hsb = {
-	saturation = 0.24,
-	brightness = 0.5,
+	saturation = 0.99,
+	brightness = 1.2,
+	hue = 0.99,
 }
 
 -- === Keybindings ===

@@ -1,10 +1,18 @@
 local wezterm = require("wezterm")
 
+local BG = "#1e1e2e"
+local ACTIVE_BG = "#c6a0f6"
+local ACTIVE_FG = "#1e1e2e"
+local HOVER_BG = "#89b4fa"
+local HOVER_FG = "#313244"
+local INACTIVE_BG = "#313244"
+local INACTIVE_FG = "#cdd6f4"
+
 -- The filled in variant of the < symbol
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick -- wezterm.nerdfonts.pl_right_hard_divider
 
 -- The filled in variant of the > symbol
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+local RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick -- wezterm.nerdfonts.pl_left_hard_divider
 
 -- This function returns the suggested title for a tab.
 -- It prefers the title that was set via `tab:set_title()`
@@ -23,21 +31,23 @@ end
 
 local function cnfg_tab_bar(tab, tabs, panes, config, hover, max_width)
 	local edge_background = "#0b0022"
-	local background = "#1b1032"
+	local background = BG
 	local foreground = "#808080"
 
 	if tab.is_active then
-		background = "#2b2042"
-		foreground = "#c0c0c0"
+		background = ACTIVE_BG
+		foreground = ACTIVE_FG
 	elseif hover then
-		background = "#3b3052"
-		foreground = "#909090"
+		background = HOVER_BG
+		foreground = HOVER_FG
+	else
+		background = INACTIVE_BG
+		foreground = INACTIVE_FG
 	end
 
 	local edge_foreground = background
 
 	local title = Tab_title(tab)
-
 	if #title > 10 then
 		title = title:match("^.*/(.+)$")
 	end
@@ -45,13 +55,13 @@ local function cnfg_tab_bar(tab, tabs, panes, config, hover, max_width)
 	return {
 		{ Background = { Color = edge_background } },
 		{ Foreground = { Color = edge_foreground } },
-		{ Text = SOLID_LEFT_ARROW },
+		{ Text = LEFT_ARROW },
 		{ Background = { Color = background } },
 		{ Foreground = { Color = foreground } },
 		{ Text = title },
 		{ Background = { Color = edge_background } },
 		{ Foreground = { Color = edge_foreground } },
-		{ Text = SOLID_RIGHT_ARROW },
+		{ Text = RIGHT_ARROW .. " " },
 	}
 end
 

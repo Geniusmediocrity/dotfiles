@@ -34,9 +34,6 @@ require("lazy").setup({
 	-- TreeSiteer
 	require("plugins.treesitter"),
 
-	-- Tree walker
-	require("plugins.treewalker"),
-
 	-- Theme
 	require("plugins.themes"),
 

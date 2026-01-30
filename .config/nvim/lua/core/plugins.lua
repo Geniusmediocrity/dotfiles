@@ -37,9 +37,6 @@ require("lazy").setup({
 	-- Theme
 	require("plugins.themes"),
 
-	-- Pretty cursor animated
-	require("plugins.smear_cursor"),
-
 	-- Vim Tmux Navigator
 	require("plugins.vim_tmux_navigator"),
 

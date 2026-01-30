@@ -10,6 +10,15 @@ fastfetch
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Terminal emulator -- fixes problem with pagers(less, man, ...)
+#  Main problem is that the basic TERM="xterm-kitty"
+#  `less` pager doesn't work correctly, cause it
+#  incorrectly processes input in search mode(`/`)
+#  and there are also a couple more issues that are
+#  not handled the way that should be, but it doesn't
+#  matter, so just know that it's necessary ;)
+export TERM=xterm-256color
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
@@ -19,7 +28,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-# ZSH_THEME="awesomepanda"
+ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,23 +85,19 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# === === Plugins === ===
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-
-
-# === === Plugins === ===
 plugins=(
 	git
 	z
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-	zsh-autocomplete
-	pip
-	python
 	uv
 	docker
 	redis-cli
@@ -105,10 +110,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 
 # === === EDITOR exports === ===
@@ -158,6 +163,7 @@ alias cat="bat --decorations never --italic-text never"
 alias bbat="bat --decorations always --italic-text always"
 export BAT_THEME="Catppuccin Mocha"
 #TODO: DONT FORGET: bat cache --build
+
 # for man pages
 export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 

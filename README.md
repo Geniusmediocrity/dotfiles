@@ -10,6 +10,8 @@ In terminals such as alacritty or wezterm I use Dank Mono Nerd Font. You can ins
 
 ### `link_configs.sh` – Configs Synchronization Script
 
+> [!WARNING] THIS SCRIPT DOESN'T WORK CORRECTLY NOW, SO PLS, DO NOT USE IT
+
 #### Description
 
 > A simple, safe, and transparent script to symlink dotfiles from `~/dotfiles`.
@@ -53,6 +55,8 @@ The script assumes this structure:
 
 #### How to use:
 
+> [!WARNING] THIS SCRIPT DOESN'T WORK CORRECTLY NOW, SO PLS, DO NOT USE IT
+
 1. Save the script as `~/dotfiles/link_configs`
 2. Make it executable:
    ```bash
@@ -64,6 +68,8 @@ The script assumes this structure:
    ```
 
 #### Options:
+
+> [!WARNING] THIS SCRIPT DOESN'T WORK CORRECTLY NOW, SO PLS, DO NOT USE IT
 
 | Option               | Description                                             |
 | -------------------- | ------------------------------------------------------- |

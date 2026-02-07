@@ -19,9 +19,10 @@ config.initial_cols = 120
 
 -- === Font Settings ===
 config.font_size = 12
-config.font = wezterm.font("Dank Mono")
+config.font = wezterm.font("ComicShannsMono Nerd Font")
 
 -- === Colors ===
+-- config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "Custom Scheme" -- If no Catppuccin theme
 -- config.colors = require("lua.colors")

@@ -118,11 +118,12 @@ export LANG=en_US.UTF-8
 
 # === === EDITOR exports === ===
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
+export EDITOR='vim'
 # Get all environment keys for nvim
 source /etc/environment
 

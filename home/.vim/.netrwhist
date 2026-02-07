@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/alexey/dotfiles/home/.vim/after/syntax'
+let g:netrw_dirhist_9='/home/alexey/dotfiles/home/.vim/after/syntax/cpp'
+let g:netrw_dirhist_8='/home/alexey/dotfiles/.config/wezterm'
+let g:netrw_dirhist_7='/home/alexey/dotfiles/.config/wezterm/lua'
+let g:netrw_dirhist_6='/home/alexey/dotfiles/.config/wezterm'
+let g:netrw_dirhist_5='/home/alexey/mydev/Projects/pythonProject/static/css'
+let g:netrw_dirhist_4='/home/alexey/mydev/Projects/pythonProject/static'
+let g:netrw_dirhist_3='/home/alexey/mydev/Projects/pythonProject'
+let g:netrw_dirhist_2='/home/alexey/mydev/Programming/C/ray-casting-master/src'
 let g:netrw_dirhist_1='/home/alexey/mydev/Programming/Linux/Docker'

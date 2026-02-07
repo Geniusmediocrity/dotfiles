@@ -25,9 +25,9 @@ return {
 			require("hover").enter()
 		end, { desc = "hover.nvim (enter)" })
 
-		vim.keymap.set("n", "<MouseMove>", function()
-			require("hover").mouse()
-		end, { desc = "hover.nvim (mouse)" })
+		-- vim.keymap.set("n", "<MouseMove>", function()
+		-- 	require("hover").mouse()
+		-- end, { desc = "hover.nvim (mouse)" })
 
 		vim.keymap.set("n", "<C-p>", function()
 			require("hover").switch("previous")

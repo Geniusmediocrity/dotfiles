@@ -50,7 +50,7 @@ require("lazy").setup({
 	require("plugins.flush"),
 
 	-- Urls opener
-	require("plugins.url_open"),
+	-- require("plugins.url_open"),
 
 	-- Color pickers and color previewers
 	require("plugins.color_pickers"),
@@ -78,7 +78,7 @@ require("lazy").setup({
 	require("plugins.alpha"),
 
 	-- Neovim Terminal
-	require("plugins.terminal"),
+	-- require("plugins.terminal"),
 
 	-- Like cd, but cooler
 	require("plugins.zoxide"),
@@ -87,10 +87,10 @@ require("lazy").setup({
 	require("plugins.uv"),
 
 	-- Compiler for code
-	require("plugins.compiler"),
+	-- require("plugins.compiler"),
 
 	-- General framework for context aware hover providers
-	require("plugins.hover"),
+	-- require("plugins.hover"),
 
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),

@@ -1,0 +1,19 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p2
+UUID=5563bd15-c2e2-4ab7-95c7-4bc26f8fbf61	/         	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@	0 0
+
+# /dev/nvme0n1p1
+UUID=06C9-A36A      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p2
+UUID=5563bd15-c2e2-4ab7-95c7-4bc26f8fbf61	/home     	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@home	0 0
+
+# /dev/nvme0n1p3
+UUID=4362d7ef-9816-416d-9a01-852ad6b487b4	none      	swap      	sw,pri=200  	0 0
+
+UUID=5563bd15-c2e2-4ab7-95c7-4bc26f8fbf61	/var/log       	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@var_log	0 0
+
+UUID=5563bd15-c2e2-4ab7-95c7-4bc26f8fbf61	/.snapshots    	btrfs     	rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@snapshots	0 0

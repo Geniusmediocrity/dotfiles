@@ -276,3 +276,8 @@ bindkey '^G' delete-char
 
 bindkey '\eb' backward-char
 bindkey '\ef' forward-char
+
+# === Terminal Proxy for wget, (used by pacman)curl etc. ===
+source ~/.proxy-config.sh
+# Turning on the proxy
+proxy_on

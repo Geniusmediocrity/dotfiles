@@ -155,14 +155,14 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*elf,*.flv,*.img,*.xls
 " PROGRAMMING {{{
 
 " C++ settings
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4
 autocmd FileType cpp setlocal formatoptions-=cro
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal omnifunc=ccomplete#Complete
 autocmd FileType cpp setlocal complete+=k~/.vim/cpp_keywords.txt
 
 " Python settings
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4
 autocmd FileType python setlocal formatoptions-=cro
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType python setlocal omnifunc=python3complete#Complete
@@ -170,21 +170,21 @@ autocmd FileType python setlocal complete+=k~/.vim/python_keywords.txt
 autocmd FileType python setlocal makeprg=python3\ -m\ py_compile\ %
 
 " HTML settings
-autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal formatoptions+=mM
 autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 
 " CSS settings
-autocmd FileType css setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType css setlocal tabstop=2 shiftwidth=2
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 
 " Jinja2 settings (treat as HTML with Django syntax)
 autocmd BufNewFile,BufRead *.j2,*.jinja,*.jinja2 setfiletype jinja.html
-autocmd FileType jinja setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType jinja setlocal tabstop=2 shiftwidth=2
 autocmd FileType jinja setlocal formatoptions+=mM
 
 " JavaScript settings
-autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " }}}
@@ -192,11 +192,11 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " EDITOR {{{
 
 " Auto-pair brackets and quotes
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+" inoremap { {}<Left>
+" inoremap [ []<Left>
+" inoremap ( ()<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 
 " Auto-close HTML tags
 autocmd FileType html,xml,jinja,js,css inoremap <buffer> < <><Left>
@@ -204,108 +204,14 @@ autocmd FileType html,xml,jinja,js,css inoremap <buffer> < <><Left>
 " Auto-indent on new lines
 autocmd FileType * inoremap <buffer> <CR> <CR><C-o>==
 
-" COMMENTING SYSTEM {{{
-
-function! s:CommentToggle(start_lnum, end_lnum)
-    " Get comment markers from 'commentstring' or fallback by filetype
-    let l:commentstr = &commentstring
-    if empty(l:commentstr)
-        let l:ft = &filetype
-        if l:ft =~? '^python$\|^python\..*'
-            let l:commentstr = '# %s'
-        elseif l:ft =~? '^sh$\|^bash$\|^zsh$\|^shell$\|^make$\|^dockerfile$'
-            let l:commentstr = '# %s'
-        elseif l:ft =~? '^c$\|^cpp$\|^cc$\|^cxx$\|^h$\|^hpp$'
-            let l:commentstr = '// %s'
-        elseif l:ft =~? '^java$\|^javascript$\|^js$\|^typescript$\|^ts$\|^go$\|^rust$\|^php$'
-            let l:commentstr = '// %s'
-        elseif l:ft =~? '^html$\|^xml$\|^jinja$\|^j2$\|^jinja2$'
-            let l:commentstr = '<!-- %s -->'
-        elseif l:ft =~? '^css$\|^scss$\|^sass$\|^less$'
-            let l:commentstr = '/* %s */'
-        elseif l:ft =~? '^sql$'
-            let l:commentstr = '-- %s'
-        elseif l:ft =~? '^lua$'
-            let l:commentstr = '-- %s'
-        elseif l:ft =~? '^vim$\|^vimspec$'
-            let l:commentstr = '" %s'
-        elseif l:ft =~? '^yaml$\|^yml$\|^toml$\|^ini$\|^conf$'
-            let l:commentstr = '# %s'
-        else
-            let l:commentstr = '// %s'  " Default fallback
-        endif
-    endif
-
-    " Extract markers safely (handle special regex chars)
-    let l:left = trim(substitute(l:commentstr, '%s.*', '', ''))
-    let l:right = trim(substitute(l:commentstr, '.*%s', '', ''))
-
-    " Skip if no markers available
-    if empty(l:left) && empty(l:right)
-        echohl WarningMsg
-        echom "No comment markers for filetype: " . &filetype
-        echohl None
-        return
-    endif
-
-    " Determine action by checking first non-blank line
-    let l:uncomment = 0
-    for lnum in range(a:start_lnum, a:end_lnum)
-        let l:line = getline(lnum)
-        if l:line !~ '^\s*$'  " Skip empty lines
-            " Check for left marker at start (with optional whitespace)
-            if !empty(l:left) && l:line =~ '^\s*' . escape(l:left, '.*[]^$\') . '\s'
-                let l:uncomment = 1
-                break
-            endif
-            " Check for right marker at end (for block comments)
-            if !empty(l:right) && l:line =~ escape(l:right, '.*[]^$\') . '\s*$'
-                let l:uncomment = 1
-                break
-            endif
-        endif
-    endfor
-
-    " Apply action to all lines
-    for lnum in range(a:start_lnum, a:end_lnum)
-        let l:line = getline(lnum)
-        if l:line =~ '^\s*$'  " Preserve empty lines
-            continue
-        endif
-
-        if l:uncomment
-            " Remove comment markers
-            if !empty(l:left)
-                let l:line = substitute(l:line, '^\(\s*\)' . escape(l:left, '.*[]^$\') . '\s*', '\1', '')
-            endif
-            if !empty(l:right)
-                let l:line = substitute(l:line, '\s*' . escape(l:right, '.*[]^$\') . '$', '', '')
-                " For block comments, clean up leftover left marker
-                if !empty(l:left)
-                    let l:line = substitute(l:line, '^\(\s*\)' . escape(l:left, '.*[]^$\') . '\s*', '\1', '')
-                endif
-            endif
-        else
-            " Add comment markers
-            if !empty(l:right)
-                " Block comment style (HTML/XML/Jinja)
-                let l:line = substitute(l:line, '^\(\s*\)\(.*\)$', '\1' . l:left . ' \2 ' . l:right, '')
-            else
-                " Line comment style (//, #)
-                let l:line = substitute(l:line, '^\(\s*\)', '\1' . l:left . ' ', '')
-            endif
-        endif
-        call setline(lnum, l:line)
-    endfor
-endfunction
-
-" Normal mode: gcc - toggle comment on current line
-nnoremap <silent> gc :<C-u>call <SID>CommentToggle(line('.'), line('.'))<CR>
-
-" Visual mode: gc - toggle comment on selected lines
-vnoremap <silent> gc :<C-u>call <SID>CommentToggle(line("'<"), line("'>"))<CR>
-
-" }}}
+" Set directories to search files in
+set path+=.,
+set path+=/usr/include,
+set path+=/usr/lib/gcc/*/*/include,
+set path+=inc,
+set path+=include,
+set path+=/usr/avr/include,
+set path+=~/.pebble-sdk/SDKs/current/sdk-core/pebble/*/include
 
 " }}}
 

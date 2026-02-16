@@ -49,9 +49,6 @@ require("lazy").setup({
 	-- Fast code navigating
 	require("plugins.flush"),
 
-	-- Urls opener
-	-- require("plugins.url_open"),
-
 	-- Color pickers and color previewers
 	require("plugins.color_pickers"),
 
@@ -80,17 +77,8 @@ require("lazy").setup({
 	-- Neovim Terminal
 	-- require("plugins.terminal"),
 
-	-- Like cd, but cooler
-	require("plugins.zoxide"),
-
 	-- Uv in neovim -- the best plug for python coding, especially in combination with compiler
 	require("plugins.uv"),
-
-	-- Compiler for code
-	-- require("plugins.compiler"),
-
-	-- General framework for context aware hover providers
-	-- require("plugins.hover"),
 
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),

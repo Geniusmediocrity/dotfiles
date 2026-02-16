@@ -30,4 +30,12 @@ return { -- Highlight, edit, and navigate code
 			enable = true,
 		},
 	},
+	config = function(_, opts)
+		local status, configs = pcall(require, "nvim-treesitter.configs")
+		if status then
+			configs.setup(opts)
+		else
+			require("nvim-treesitter").setup(opts)
+		end
+	end,
 }

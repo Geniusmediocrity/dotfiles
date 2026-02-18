@@ -75,7 +75,7 @@ require("lazy").setup({
 	require("plugins.alpha"),
 
 	-- Neovim Terminal
-	-- require("plugins.terminal"),
+	require("plugins.terminal"),
 
 	-- Uv in neovim -- the best plug for python coding, especially in combination with compiler
 	require("plugins.uv"),

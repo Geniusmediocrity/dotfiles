@@ -221,6 +221,7 @@ return {
 				cpplint = {},
 				codelldb = {},
 				-- cmake_language_server = {},
+				cmakelang = {},
 				neocmake = {},
 
 				-- Python

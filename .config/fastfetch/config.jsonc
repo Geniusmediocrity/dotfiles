@@ -1,45 +1,103 @@
-/*
-HyDE provides xdg/share/fastfetch/presets/hyde/*.config.jsonc files for different layouts. 
-You can also create your own config.jsonc file in the same directory to create a custom theme. 
-
-To test HyDE's fastfetch theme, run:
-fastfetch --config hyde/*.jsonc
-
-*/
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "source": "~/.config/fastfetch/logo.txt",
     "height": 18,
+    "padding": {
+      "top": 1,
+      "right": 3,
+    },
   },
   "display": {
-    "separator": " : ",
+    "separator": "  ",
+    "key": {
+      "width": 14, // This option makes an ideal vertical alignment
+    },
   },
   "modules": [
+    "break",
+    "break",
+    "break",
+    "break",
+    "break",
+    // --- BLOCK 1: System ---
     {
       "type": "custom",
-      "format": "┌──────────────────────────────────────────┐",
+      "format": "\u001b[34m╭───────────────── \u001b[1m󰣇 System\u001b[0m \u001b[34m────────────────╮\u001b[0m",
     },
     {
-      "type": "chassis",
-      "key": "  󰇺 Chassis",
-      "format": "{1} {2} {3}",
+      "type": "title",
+      "key": "   User",
+      "format": "{1}@{2}",
+      "keyColor": "blue",
     },
     {
       "type": "os",
-      "key": "  󰣇 OS",
+      "key": "   OS",
       "format": "{2}",
-      "keyColor": "red",
+      "keyColor": "blue",
     },
     {
       "type": "kernel",
-      "key": "   Kernel",
+      "key": "   Kernel",
       "format": "{2}",
-      "keyColor": "red",
+      "keyColor": "blue",
     },
     {
       "type": "packages",
-      "key": "  󰏗 Packages",
+      "key": "   Packages ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wm",
+      "key": "   WM",
+      "format": "{2}",
+      "keyColor": "blue",
+    },
+    {
+      "type": "terminal",
+      "format": "{5} {6}",
+      "key": "   Terminal",
+      "keyColor": "blue",
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[34m╰──────────────────────────────────────────╯\u001b[0m",
+    },
+    "break",
+
+    // --- BLOCK 2: Hardware ---
+    {
+      "type": "custom",
+      "format": "\u001b[32m╭──────────────── \u001b[1m󰌢 Hardware\u001b[0m \u001b[32m───────────────╮\u001b[0m",
+    },
+    {
+      "type": "chassis",
+      "key": "   Chassis",
+      "format": "{1} {2} {3}",
+      "keyColor": "green",
+    },
+    {
+      "type": "cpu",
+      "key": "   CPU",
+      "format": "{1} @ {7}",
+      "keyColor": "green",
+    },
+    {
+      "type": "gpu",
+      "key": "  󰢮 GPU",
+      "format": "{1} {2}",
+      "keyColor": "green",
+    },
+    {
+      "type": "gpu",
+      "key": "   Driver",
+      "format": "{3}",
+      "keyColor": "green",
+    },
+    {
+      "type": "memory",
+      "key": "  󰘚 Memory",
       "keyColor": "green",
     },
     {
@@ -49,69 +107,51 @@ fastfetch --config hyde/*.jsonc
       "keyColor": "green",
     },
     {
-      "type": "terminal",
-      "key": "   Terminal",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "wm",
-      "key": "  󱗃 WM",
-      "format": "{2}",
-      "keyColor": "yellow",
-    },
-    {
       "type": "custom",
-      "format": "└──────────────────────────────────────────┘",
+      "format": "\u001b[32m╰──────────────────────────────────────────╯\u001b[0m",
     },
     "break",
-    {
-      "type": "title",
-      "key": "  ",
-      "format": "{6} {7} {8}",
-    },
+
+    // --- BLOCK 3: Network and time ---
     {
       "type": "custom",
-      "format": "┌──────────────────────────────────────────┐",
+      "format": "\u001b[35m╭──────────────── \u001b[1m󰈀 Network\u001b[0m \u001b[35m────────────────╮\u001b[0m",
     },
     {
-      "type": "cpu",
-      "format": "{1} @ {7}",
-      "key": "   CPU",
-      "keyColor": "blue",
-    },
-    {
-      "type": "gpu",
-      "format": "{1} {2}",
-      "key": "  󰊴 GPU",
-      "keyColor": "blue",
-    },
-    {
-      "type": "gpu",
-      "format": "{3}",
-      "key": "   GPU Driver",
+      "type": "LocalIp",
+      "format": "{1}",
+      "key": "  󰩟 Local IP",
       "keyColor": "magenta",
     },
     {
-      "type": "memory",
-      "key": "   Memory ",
+      "type": "PublicIp",
+      "format": "{1}",
+      "key": "  󰲝 Public IP",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "DNS",
+      "key": "  󰒍 DNS",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "uptime",
+      "key": "  󰅐 Uptime",
       "keyColor": "magenta",
     },
     {
       "type": "disk",
-      "key": "  󱦟 OS Age ",
+      "key": "  󰔠 OS Age",
       "folders": "/",
-      "keyColor": "red",
       "format": "{days} days",
-    },
-    {
-      "type": "uptime",
-      "key": "  󱫐 Uptime ",
-      "keyColor": "red",
+      "keyColor": "magenta",
     },
     {
       "type": "custom",
-      "format": "└──────────────────────────────────────────┘",
+      "format": "\u001b[35m╰──────────────────────────────────────────╯\u001b[0m",
     },
+
+    // --- PALETTE ---
     {
       "type": "colors",
       "paddingLeft": 2,

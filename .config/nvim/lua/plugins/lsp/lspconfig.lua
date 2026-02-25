@@ -221,6 +221,7 @@ return {
 				cpplint = {},
 				codelldb = {},
 				-- cmake_language_server = {},
+				cmakelang = {},
 				neocmake = {},
 
 				-- Python
@@ -229,7 +230,7 @@ return {
 				-- ruff = {},
 
 				-- Web
-				prettier = {},
+				-- prettier = {},
 				tsgo = {},
 				cssls = {},
 				html = {

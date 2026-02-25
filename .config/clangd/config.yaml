@@ -2,8 +2,9 @@ CompileFlags:
   Add:
     - -Wall
     - -Wextra
-    - -std=c++23
+    # - -std=c++23
     - -I.
+    - -I/usr/avr/include
     - -I../inc
     - -I../include
 

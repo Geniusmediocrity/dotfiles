@@ -21,6 +21,7 @@ return {
 			},
 			-- auto-install configured formatters & linters (with null-ls)
 			automatic_installation = true,
+			handlers = {},
 		})
 
 		local sources = {

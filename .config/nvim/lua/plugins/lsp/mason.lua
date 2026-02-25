@@ -13,7 +13,7 @@ return {
 				"css-languageserver",
 				"rust-analyzer",
 				"stylua",
-				"prettierd",
+				"prettier",
 			},
 		},
 	},

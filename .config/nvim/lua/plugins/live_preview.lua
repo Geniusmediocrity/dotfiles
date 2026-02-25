@@ -15,22 +15,20 @@ return {
 			picker = "telescope",
 		},
 	},
+	-- {
+	-- 	"dcai/markdown-preview.nvim",
+	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+	-- 	build = "cd app && npm install",
+	-- 	init = function()
+	-- 		vim.g.mkdp_filetypes = { "markdown" }
+	-- 	end,
+	-- 	ft = { "markdown" },
+	-- },
 	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && yarn install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	},
-	{
-		"toppair/peek.nvim",
-		build = "deno task --quiet build:fast",
-		config = function()
-			require("peek").setup()
-			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-		end,
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
 	},
 }

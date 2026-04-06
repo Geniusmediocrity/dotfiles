@@ -195,11 +195,11 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- Asembly lang
+				-- === Asembly lang ===
 				-- asmfmt = {},
 				-- asm_lsp = {},
 
-				-- C/C++
+				-- === C/C++ ===
 				clangd = {
 					cmd = {
 						"clangd",
@@ -218,69 +218,72 @@ return {
 					},
 				},
 				clang_format = {},
-				cpplint = {},
+				-- cpplint = {},
 				codelldb = {},
 				-- cmake_language_server = {},
 				cmakelang = {},
 				neocmake = {},
 
-				-- Python
+				-- === Java ===
+				jdtls = {},
+
+				-- === Python ===
 				pyright = {},
 				debugpy = {},
 				-- ruff = {},
 
-				-- Web
+				-- === Web ===
 				-- prettier = {},
-				tsgo = {},
-				cssls = {},
-				html = {
-					cmd = { "vscode-html-language-server", "--stdio" },
-					filetypes = { "html" },
-					init_options = {
-						configurationSection = { "html", "css", "javascript" },
-						embeddedLanguages = {
-							css = true,
-							javascript = true,
-							html = true,
-						},
-					},
-					root_dir = function(fname)
-						return root_pattern(fname) or vim.loop.os_homedir()
-					end,
-					settings = {},
-				},
+				-- tsgo = {},
+				-- cssls = {},
+				-- html = {
+				-- 	cmd = { "vscode-html-language-server", "--stdio" },
+				-- 	filetypes = { "html" },
+				-- 	init_options = {
+				-- 		configurationSection = { "html", "css", "javascript" },
+				-- 		embeddedLanguages = {
+				-- 			css = true,
+				-- 			javascript = true,
+				-- 			html = true,
+				-- 		},
+				-- 	},
+				-- 	root_dir = function(fname)
+				-- 		return root_pattern(fname) or vim.loop.os_homedir()
+				-- 	end,
+				-- 	settings = {},
+				-- },
 
-				-- Bash
-				bashls = {
-					filetypes = { "shell", "bash" },
-					settings = {
-						backgroundAnalysisMaxFiles = 700,
-						enableSourceErrorDiagnostics = true,
-						explainshellEndpoint = "",
-						globPattern = "**/*@(.sh|.inc|.bash|.command)",
-						includeAllWorkspaceSymbols = true,
-						logLevel = "info",
-						shellcheckArguments = "",
-						shellcheckPath = "shellcheck",
-					},
-				},
-				shfmt = {
-					binaryNextLine = true,
-					caseIndent = true,
-					funcNextLine = false,
-					ignoreEditorconfig = false,
-					keepPadding = false,
-					languageDialect = "bash",
-					path = "shfmt",
-					simplifyCode = false,
-					spaceRedirects = false,
-				},
+				-- === Bash ===
+				-- bashls = {
+				-- 	filetypes = { "shell", "bash" },
+				-- 	settings = {
+				-- 		backgroundAnalysisMaxFiles = 700,
+				-- 		enableSourceErrorDiagnostics = true,
+				-- 		explainshellEndpoint = "",
+				-- 		globPattern = "**/*@(.sh|.inc|.bash|.command)",
+				-- 		includeAllWorkspaceSymbols = true,
+				-- 		logLevel = "info",
+				-- 		shellcheckArguments = "",
+				-- 		shellcheckPath = "shellcheck",
+				-- 	},
+				-- },
+				-- shfmt = {
+				-- 	binaryNextLine = true,
+				-- 	caseIndent = true,
+				-- 	funcNextLine = false,
+				-- 	ignoreEditorconfig = false,
+				-- 	keepPadding = false,
+				-- 	languageDialect = "bash",
+				-- 	path = "shfmt",
+				-- 	simplifyCode = false,
+				-- 	spaceRedirects = false,
+				-- },
 
-				-- Sql
+				-- === Sql ===
 				-- sqls = {},
 				-- postgres_lsp = {},
 
-				-- Lua
+				-- === Lua ===
 				stylua = {},
 				lua_ls = {
 					-- cmd = { ... },

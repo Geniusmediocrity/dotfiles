@@ -80,6 +80,9 @@ require("lazy").setup({
 	-- Uv in neovim -- the best plug for python coding, especially in combination with compiler
 	require("plugins.uv"),
 
+	-- General framework for context aware hover providers
+	require("plugins.hover"),
+
 	-- LSP and other good stuff for vibe coding
 	require("plugins.lsp"),
 })

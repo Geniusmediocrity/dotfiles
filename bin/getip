@@ -1,0 +1,3 @@
+#! /usr/bin/sh
+
+echo "$(curl -fsSL api.ipify.org)"

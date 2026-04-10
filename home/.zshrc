@@ -17,7 +17,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 #  and there are also a couple more issues that are
 #  not handled the way that should be, but it doesn't
 #  matter, so just know that it's necessary ;)
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -177,12 +177,16 @@ export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08
 
 # === === Yazi setup === ===
 function y() {
+	# kitty @ set-background-opacity 1.0
+    
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+
+    # kitty @ set-background-opacity 0.84
 }
 
 

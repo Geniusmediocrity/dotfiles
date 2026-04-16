@@ -12,10 +12,10 @@ return { -- Highlight, edit, and navigate code
 			"diff",
 			"html",
 			"css",
-			"javascript",
 			"lua",
 			"luadoc",
 			"markdown",
+			"rust",
 		},
 		-- Autoinstall languages that are not installed
 		sync_install = true,

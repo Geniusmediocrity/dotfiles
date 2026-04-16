@@ -9,7 +9,6 @@ return {
 	require("core.keymaps.which_key"),
 	require("core.keymaps.treewalker"),
 	require("core.keymaps.noice"),
-	require("core.keymaps.navbuddy"),
 	require("core.keymaps.gitsigns"),
 	require("core.keymaps.terminal"),
 }

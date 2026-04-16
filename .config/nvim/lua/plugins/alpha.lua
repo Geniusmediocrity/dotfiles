@@ -8,14 +8,14 @@ return {
 
 			-- Header Section
 			local logo = [[
- ██████   █████              ███                 
-░░██████ ░░███              ░░░                  
- ░███░███ ░███  █████ █████ ████  █████████████  
- ░███░░███░███ ░░███ ░░███ ░░███ ░░███░░███░░███ 
- ░███ ░░██████  ░███  ░███  ░███  ░███ ░███ ░███ 
- ░███  ░░█████  ░░███ ███   ░███  ░███ ░███ ░███ 
+ ██████   █████              ███
+░░██████ ░░███              ░░░
+ ░███░███ ░███  █████ █████ ████  █████████████
+ ░███░░███░███ ░░███ ░░███ ░░███ ░░███░░███░░███
+ ░███ ░░██████  ░███  ░███  ░███  ░███ ░███ ░███
+ ░███  ░░█████  ░░███ ███   ░███  ░███ ░███ ░███
  █████  ░░█████  ░░█████    █████ █████░███ █████
-░░░░░    ░░░░░    ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░ 
+░░░░░    ░░░░░    ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░
 
                               by Geniusmediocrity
   ]]
@@ -26,18 +26,18 @@ return {
 
 			-- Buttons Section
 			dashboard.section.buttons.val = {
-				dashboard.button("f", " Find file", "<cmd>Telescope find_files <CR>"),
+				dashboard.button("f", "󰈞 Find file", "<cmd>Telescope find_files <CR>"),
 				dashboard.button("n", " New file", "<cmd>ene <BAR> startinsert <CR>"),
 				dashboard.button("r", " Recent files", "<cmd>Telescope oldfiles <CR>"),
-				dashboard.button("g", " Find text", "<cmd>Telescope live_grep <CR>"),
+				dashboard.button("g", "󱎸 Find text", "<cmd>Telescope live_grep <CR>"),
 				dashboard.button(
 					"c",
-					" Config",
-				"<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath("config").. " <CR>"
+					" Config",
+					"<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath("config") .. " <CR>"
 				),
 				dashboard.button("l", "󰒲 Lazy", "<cmd> Lazy <cr>"),
 				dashboard.button("m", " Mason", "<cmd> Mason <cr>"),
-				dashboard.button("q", " Quit", "<cmd>q <CR>"),
+				dashboard.button("q", "󰮯 Quit", "<cmd>q <CR>"),
 			}
 			dashboard.section.buttons.opts.hl = "AlphaButtons"
 
@@ -76,12 +76,12 @@ return {
 
 					-- Footer
 					dashboard.section.footer.val = "⚡ Neovim loaded "
-					.. stats.loaded
-					.. "/"
-					.. stats.count
-					.. " plugins in "
-					.. ms
-					.. "ms"
+						.. stats.loaded
+						.. "/"
+						.. stats.count
+						.. " plugins in "
+						.. ms
+						.. "ms"
 					pcall(vim.cmd.AlphaRedraw)
 					dashboard.section.footer.opts.hl = "AlphaFooter"
 				end,

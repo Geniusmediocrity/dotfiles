@@ -150,20 +150,20 @@ source /etc/environment
 # On other distro, for example deb similar -- valkey.service should be replaced with redis-server
 alias redisgo='sudo systemctl restart valkey.service && iredis'
 
-#TODO: alias r="radian"
-
 # --- Eza (better ls) ---
 alias ls="eza --tree --level=1 --icons=always --no-time -h --group"
 
 # --- Zoxide (better cd) ---
 eval $(zoxide init zsh)
-# alias cd="z"
 
 # --- Bat (better cat) ---
 alias cat="bat --decorations never --italic-text never"
 alias bbat="bat --decorations always --italic-text always"
 export BAT_THEME="Catppuccin Mocha"
 #TODO: DONT FORGET: bat cache --build
+
+# --- SSH ---
+alias ssh="TERM=xterm-256color ssh"
 
 # for man pages
 export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
@@ -177,16 +177,12 @@ export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08
 
 # === === Yazi setup === ===
 function y() {
-	# kitty @ set-background-opacity 1.0
-    
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
-
-    # kitty @ set-background-opacity 0.84
 }
 
 

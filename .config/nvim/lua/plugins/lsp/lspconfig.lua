@@ -15,28 +15,30 @@ return {
 
 			-- navic
 			"SmiteshP/nvim-navic",
-			-- navbuddy
-			{
-				"SmiteshP/nvim-navbuddy",
-				dependencies = {
-					"SmiteshP/nvim-navic",
-					"MunifTanjim/nui.nvim",
-				},
-				opts = { lsp = { auto_attach = true } },
-			},
 		},
 		config = function()
 			local navic = require("nvim-navic")
-			local navbuddy = require("nvim-navbuddy")
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 				callback = function(event)
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 
-					if client.server_capabilities.documentSymbolProvider then
-						navic.attach(client, event.buf)
-						navbuddy.attach(client, event.buf)
+					-- Rust prewrite formatter
+					if client and client.name == "rust_analyzer" then
+						local format_augroup = vim.api.nvim_create_augroup("RustFormatOnSave", { clear = true })
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							group = format_augroup,
+							buffer = event.buf,
+							callback = function()
+								vim.lsp.buf.format({ async = false, id = client.id })
+							end,
+						})
+
+						-- rust_analyzer inlay hints
+						if vim.lsp.inlay_hint then
+							vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
+						end
 					end
 
 					local map = function(keys, func, desc, mode)
@@ -224,13 +226,37 @@ return {
 				cmakelang = {},
 				neocmake = {},
 
-				-- === Java ===
-				jdtls = {},
-
 				-- === Python ===
 				pyright = {},
 				debugpy = {},
 				-- ruff = {},
+
+				-- === Rust ===
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							-- Enabling clippy for linting
+							checkOnSave = {
+								command = "clippy",
+							},
+							-- Additional useful features
+							procMacro = {
+								enable = true,
+							},
+							cargo = {
+								buildScripts = {
+									enable = true,
+								},
+							},
+							-- Enabling types display (inlay hints), if they are not picked up
+							completion = {
+								postfix = {
+									enable = true,
+								},
+							},
+						},
+					},
+				},
 
 				-- === Web ===
 				-- prettier = {},

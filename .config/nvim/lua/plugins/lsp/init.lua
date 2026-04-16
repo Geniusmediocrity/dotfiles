@@ -8,5 +8,4 @@ return {
 	require("plugins.lsp.debug"),
 	require("plugins.lsp.navic"),
 	require("plugins.lsp.barbecue"),
-	require("plugins.lsp.navbuddy"),
 }

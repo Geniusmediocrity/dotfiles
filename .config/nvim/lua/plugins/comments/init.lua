@@ -1,7 +1,7 @@
 return {
 	-- Facilitates Commenting
-	require('plugins.comments.comments'),
+	-- require('plugins.comments.comments'),
 
 	-- Highlight todo, notes, etc in comments
-	require('plugins.comments.todo')
+	require("plugins.comments.todo"),
 }

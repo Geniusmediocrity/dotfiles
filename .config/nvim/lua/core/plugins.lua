@@ -28,6 +28,9 @@ require("lazy").setup({
 	-- Telescope (Fuzzy Finder)
 	require("plugins.telescope"),
 
+	-- fff.nvim
+	require("plugins.fff"),
+
 	-- Bufferline -- turns buffers(on the top of the screen in nvim) to tabs
 	require("plugins.bufferline"),
 

@@ -27,7 +27,7 @@
     },
     {
       "type": "title",
-      "key": "   User",
+      "key": "   User",
       "format": "{1}@{2}",
       "keyColor": "blue",
     },
@@ -91,7 +91,7 @@
     },
     {
       "type": "gpu",
-      "key": "   Driver",
+      "key": "   Driver",
       "format": "{3}",
       "keyColor": "green",
     },

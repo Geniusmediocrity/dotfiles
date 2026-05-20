@@ -223,8 +223,8 @@ return {
 				-- cpplint = {},
 				codelldb = {},
 				-- cmake_language_server = {},
-				cmakelang = {},
-				neocmake = {},
+				-- cmakelang = {},
+				-- neocmake = {},
 
 				-- === Python ===
 				pyright = {},
@@ -327,7 +327,13 @@ return {
 				-- Docker and Docker Compose
 				-- docker_language_server = {},
 				docker_compose_language_service = {},
-				dockerfile_language_server = {},
+				dockerls = {},
+
+				-- === Toml ===
+				taplo = {},
+
+				-- === Ansible ===
+				ansiblels = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers)

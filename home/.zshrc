@@ -94,16 +94,16 @@ ZSH_THEME="awesomepanda"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-	git
-	z
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	uv
-	docker
-	redis-cli
-	colorize
-	colored-man-pages
-	history
+    git
+    z
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    uv
+    docker
+    redis-cli
+    colorize
+    colored-man-pages
+    history
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,18 +115,15 @@ export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-
 # === === EDITOR exports === ===
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-export EDITOR='vim'
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='nvim'
+fi
 # Get all environment keys for nvim
 source /etc/environment
-
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -174,17 +171,15 @@ export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08
 # --- Dysk (better df) ---
 # alias df="dysk"
 
-
 # === === Yazi setup === ===
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
-
 
 # === === Fzf - the best files, commands, ssh finder === ===
 # Setup fzf key bindings and fuzy completion
@@ -209,12 +204,12 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --exclude .git . "$1"
+    fd --hidden --exclude .git . "$1"
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type=d --hidden --exclude .git . "$1"
+    fd --type=d --hidden --exclude .git . "$1"
 }
 
 source ~/fzf-git.sh/fzf-git.sh
@@ -228,18 +223,16 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 # - The first argument to the function is the name of the command.
 # - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
-  local command=$1
-  shift
+    local command=$1
+    shift
 
-  case "$command" in
-    cd)           fzf --preview 'eza --tree --icons=always --color=always {} | head -200' "$@" ;;
-    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
-  esac
+    case "$command" in
+    cd) fzf --preview 'eza --tree --icons=always --color=always {} | head -200' "$@" ;;
+    export | unset) fzf --preview "eval 'echo \${}'" "$@" ;;
+    ssh) fzf --preview 'dig {}' "$@" ;;
+    *) fzf --preview "$show_file_or_dir_preview" "$@" ;;
+    esac
 }
-
-
 
 # === === PATH exports === ===
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -253,19 +246,18 @@ export PATH="$HOME/home/alexey/.local/share/uv/python/cpython-3.13.9-linux-x86_6
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
-
 # Source theme
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/awesomepanda.zsh-theme
 
 # === zsh-autocomplete key bindings ===
 # This makes Tab and ShiftTab move the selection in the menu right and left, respectively, instead of exiting the menu:
-bindkey              '^I'         menu-complete
+bindkey '^I' menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 # This makes ← and → always move the cursor on the command line, even when you are in the menu:
-bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
-bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+bindkey -M menuselect '^[[D' .backward-char '^[OD' .backward-char
+bindkey -M menuselect '^[[C' .forward-char '^[OC' .forward-char
 # read documentation here: https://github.com/marlonrichert/zsh-autocomplete?tab=readme-ov-file#keyboard-shortcuts
 
 # === Terminal Keybindings ===

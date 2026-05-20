@@ -37,6 +37,6 @@ return {
 			require("hover").switch("next")
 		end, { desc = "hover.nvim (next source)" })
 
-		vim.o.mousemoveevent = true
+		vim.o.mousemoveevent = false
 	end,
 }

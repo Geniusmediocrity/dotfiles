@@ -1,0 +1,18 @@
+#! /bin/bash
+
+usage_example="usage example: timer <time-in-seconds>"
+
+if [ "$#" -ne 1 ]; then
+    echo "[ERROR]: No arguments specified"
+    echo "$usage_example"
+    exit 1
+fi
+
+n=$1
+while [ "$n" -ge 0 ]; do
+    sleep 1s
+    n=$((n - 1))
+    printf "%06d\r" "$n"
+done
+
+$(notify-send -u critical "timer expired")

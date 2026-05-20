@@ -15,6 +15,7 @@ return {
 				"ruff", -- python formatter
 				"clang-format", -- c/c++ formatter
 				"cmakelang", -- cmake-format
+				"taplo", -- toml formatter
 				-- "asmfmt", -- assembler
 			},
 		})
@@ -48,6 +49,8 @@ return {
 				cpp = { "clang_format" },
 				cmake = { "cmake_format" },
 
+				toml = { "taplo" },
+
 				asm = { "asmfmt" },
 
 				-- Fallback для всех остальных типов файлов: использовать LSP
@@ -70,9 +73,9 @@ return {
 				shfmt = {
 					prepend_args = { "-i", "4" },
 				},
-				clang_format = {
-					prepend_args = { "-style=~/.clang-format" },
-				},
+				-- clang_format = {
+				-- 	prepend_args = { "-style=~/.clang-format" },
+				-- },
 				-- ruff_organize_imports & ruff_format are already configured "out of the box"
 			},
 		})

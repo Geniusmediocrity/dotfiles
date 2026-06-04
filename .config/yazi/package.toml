@@ -3,6 +3,11 @@ use = "MasouShizuka/close-and-restore-tab"
 rev = "5047217"
 hash = "bb24648b1f96f1cef8c1543742189aad"
 
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "41ebef8"
+hash = "5805affd3ae8adcb3c72b6997d21c0a6"
+
 [[flavor.deps]]
 use = "tkapias/nightfly"
 rev = "599b8ad"

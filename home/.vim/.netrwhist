@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/etc/samba'
+let g:netrw_dirhist_2='/etc/samba/private'
+let g:netrw_dirhist_1='/etc/samba'
 let g:netrw_dirhist_0='/home/alexey/dotfiles/.config/yazi/flavors/catppuccin-mocha.yazi'
 let g:netrw_dirhist_9='/home/alexey/.config/clangd'
 let g:netrw_dirhist_8='/boot/loader/entries'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_7='/boot/loader'
 let g:netrw_dirhist_6='/boot'
 let g:netrw_dirhist_5='/root'
 let g:netrw_dirhist_4='/home/alexey/.config/fastfetch'
-let g:netrw_dirhist_3='/home/alexey'
-let g:netrw_dirhist_2='/home/alexey/mydev/Programming/C++/College/blinking'
-let g:netrw_dirhist_1='/home/alexey'

@@ -269,6 +269,9 @@ bindkey '^G' delete-char
 bindkey '\eb' backward-char
 bindkey '\ef' forward-char
 
+# === Cargo package binaries ===
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # === Terminal Proxy for wget, (used by pacman)curl etc. ===
 source ~/.proxy-config.sh
 # Turning on the proxy

@@ -43,8 +43,8 @@ require("lazy").setup({
 	-- Vim Tmux Navigator
 	require("plugins.vim_tmux_navigator"),
 
-	-- CMP Nvim
-	require("plugins.cmp"),
+	-- Blink cmp Nvim
+	require("plugins.blink_cmp"),
 
 	-- Lualine configuration
 	require("plugins.lualine"),

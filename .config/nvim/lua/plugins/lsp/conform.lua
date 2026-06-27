@@ -14,7 +14,6 @@ return {
 				"shfmt", -- shell script formatter
 				"ruff", -- python formatter
 				"clang-format", -- c/c++ formatter
-				"cmakelang", -- cmake-format
 				"taplo", -- toml formatter
 				-- "asmfmt", -- assembler
 			},
@@ -47,7 +46,8 @@ return {
 
 				c = { "clang_format" },
 				cpp = { "clang_format" },
-				cmake = { "cmake_format" },
+
+				rust = { "rustfmt" },
 
 				toml = { "taplo" },
 

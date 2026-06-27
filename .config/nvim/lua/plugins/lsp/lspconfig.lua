@@ -12,6 +12,7 @@ return {
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
+			"saghen/blink.lib",
 
 			-- navic
 			"SmiteshP/nvim-navic",
@@ -26,15 +27,6 @@ return {
 
 					-- Rust prewrite formatter
 					if client and client.name == "rust_analyzer" then
-						local format_augroup = vim.api.nvim_create_augroup("RustFormatOnSave", { clear = true })
-						vim.api.nvim_create_autocmd("BufWritePre", {
-							group = format_augroup,
-							buffer = event.buf,
-							callback = function()
-								vim.lsp.buf.format({ async = false, id = client.id })
-							end,
-						})
-
 						-- rust_analyzer inlay hints
 						if vim.lsp.inlay_hint then
 							vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
@@ -217,6 +209,7 @@ return {
 						"--pch-storage=memory",
 						"--completion-style=detailed",
 						"--index-file=global",
+						"--compile-commands-dir=build",
 					},
 				},
 				clang_format = {},
@@ -257,6 +250,8 @@ return {
 						},
 					},
 				},
+				-- ui lib
+				slint_lsp = {},
 
 				-- === Web ===
 				-- prettier = {},

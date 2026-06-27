@@ -11,4 +11,5 @@ return {
 	require("core.keymaps.terminal"),
 	require("core.keymaps.telescope"),
 	require("core.keymaps.fff"),
+	require("core.keymaps.lsp"),
 }

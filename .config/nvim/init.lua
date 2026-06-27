@@ -1,8 +1,8 @@
 -- Basic
-require('core.options')
+require("core.options")
 
 -- Plugins
-require('core.plugins')
+require("core.plugins")
 
 -- Keymaps
-require('core.keymaps')
+require("core.keymaps")

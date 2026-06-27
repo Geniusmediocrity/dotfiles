@@ -20,7 +20,8 @@ require("lazy").setup({
 	"NMAC427/guess-indent.nvim",
 
 	-- NeoTree configuration
-	require("plugins.neotree"),
+	-- require("plugins.neotree"),
+	require("plugins.yazi"),
 
 	-- Git signs helper
 	require("plugins.gitsigns"),
@@ -66,7 +67,7 @@ require("lazy").setup({
 	require("plugins.noice"),
 
 	-- Indential guides
-	require("plugins.ibl"),
+	require("plugins.indentscope"),
 
 	-- Better Inline diagnostics
 	require("plugins.inline_diagnostics"),

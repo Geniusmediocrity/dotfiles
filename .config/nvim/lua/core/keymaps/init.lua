@@ -1,6 +1,5 @@
 return {
 	require("core.keymaps.basic"),
-	require("core.keymaps.neotree"),
 	require("core.keymaps.color_pickers"),
 	require("core.keymaps.bufferline"),
 	require("core.keymaps.live_preview"),

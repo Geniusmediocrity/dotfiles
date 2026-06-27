@@ -1,5 +1,8 @@
 return {
-	"windwp/nvim-autopairs",
-	event = "InsertEnter",
-	opts = {}
+	"echasnovski/mini.pairs",
+	event = "VeryLazy",
+	opts = {
+		modes = { insert = true, command = true, terminal = true },
+		skip_next = false,
+	},
 }

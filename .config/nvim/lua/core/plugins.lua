@@ -74,9 +74,6 @@ require("lazy").setup({
 	-- Better Inline diagnostics
 	require("plugins.inline_diagnostics"),
 
-	-- Start menu
-	require("plugins.alpha"),
-
 	-- Neovim Terminal
 	require("plugins.terminal"),
 

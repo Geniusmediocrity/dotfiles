@@ -13,13 +13,8 @@ return {
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
 			"saghen/blink.lib",
-
-			-- navic
-			"SmiteshP/nvim-navic",
 		},
 		config = function()
-			local navic = require("nvim-navic")
-
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 				callback = function(event)

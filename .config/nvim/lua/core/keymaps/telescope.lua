@@ -39,16 +39,7 @@ vim.keymap.set("n", "<leader>/", function()
 	}))
 end, { desc = "[/] Fuzzily Search In Current Buffer" })
 
---  See `:help telescope.builtin.live_grep()` for information about particular keys
---  Seacrh in current buffers(files)
--- vim.keymap.set("n", "<leader>s/", function()
--- 	builtin.live_grep({
--- 		grep_open_files = true,
--- 		prompt_title = "Live Grep in Open Files",
--- 	})
--- end, { desc = "[S]earch [/] in Open Buffers" })
-
--- === Ypur Neo Vim config searcher ===
+-- === Your Neo Vim config searcher ===
 -- Shortcut for searching your Neovim configuration files
 vim.keymap.set("n", "<leader>sn", function()
 	builtin.find_files({ cwd = vim.fn.stdpath("config") })

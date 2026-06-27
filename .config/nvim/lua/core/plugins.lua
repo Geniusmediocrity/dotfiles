@@ -40,9 +40,6 @@ require("lazy").setup({
 	-- Theme
 	require("plugins.themes"),
 
-	-- Vim Tmux Navigator
-	require("plugins.vim_tmux_navigator"),
-
 	-- Blink cmp Nvim
 	require("plugins.blink_cmp"),
 

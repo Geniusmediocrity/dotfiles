@@ -84,10 +84,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Navic requiring
-vim.o.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
 -- VS Code-style blinking cursor with thin bar in insert mode
 vim.opt.guicursor = {
 	-- Normal, Visual, Command-line: block

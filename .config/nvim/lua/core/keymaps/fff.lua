@@ -9,6 +9,3 @@ vim.keymap.set("n", "<leader>sg", fff.live_grep, { desc = "[S]earch by [L]ive Gr
 vim.keymap.set("n", "<leader>sw", function()
 	fff.live_grep({ query = vim.fn.expand("<cword>") })
 end, { desc = "[S]earch [W]ord in project" })
-
--- Searching in all file(no dividing by opened buffer)
-vim.keymap.set("n", "<leader>s/", fff.live_grep, { desc = "[S]earch [/] in Project" })

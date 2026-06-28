@@ -2,7 +2,7 @@
 
 ## NeoVim
 
-<doc/imgs/nvim-1.png>
+![neovim](./doc/imgs/nvim-1.png)
 
 ## Fonts
 

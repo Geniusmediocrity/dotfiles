@@ -7,6 +7,6 @@ return {
 		require("todo-comments").setup(opts)
 	end,
 	keys = {
-		{ "<leader>T", "<cmd>TodoTelescope<cr>", desc = "TODOs (Telescope)" },
+		{ "<leader>T", "<cmd>TodoFzfLua<cr>", desc = "TODOs (fzf-lua)" },
 	},
 }

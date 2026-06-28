@@ -19,15 +19,14 @@ require("lazy").setup({
 	-- Detect tabstop and shiftwidth automatically
 	"NMAC427/guess-indent.nvim",
 
-	-- NeoTree configuration
-	-- require("plugins.neotree"),
+	-- Yazi
 	require("plugins.yazi"),
 
 	-- Git signs helper
 	require("plugins.gitsigns"),
 
-	-- Telescope (Fuzzy Finder)
-	require("plugins.telescope"),
+	-- Fuzzy Finder
+	require("plugins.fzf"),
 
 	-- fff.nvim
 	require("plugins.fff"),
@@ -41,7 +40,7 @@ require("lazy").setup({
 	-- Theme
 	require("plugins.themes"),
 
-	-- Blink cmp Nvim
+	-- Blink.cmp Nvim
 	require("plugins.blink_cmp"),
 
 	-- Lualine configuration

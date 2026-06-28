@@ -2,7 +2,7 @@ return {
 	{
 		"brianhuster/live-preview.nvim",
 		dependencies = {
-			"nvim-telescope/telescope.nvim",
+			"ibhagwan/fzf-lua",
 		},
 		opt = {
 			browser = "default",
@@ -12,18 +12,9 @@ return {
 			dynamic_root = false,
 
 			sync_scroll = true,
-			picker = "telescope",
+			picker = "fzf-lua",
 		},
 	},
-	-- {
-	-- 	"dcai/markdown-preview.nvim",
-	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-	-- 	build = "cd app && npm install",
-	-- 	init = function()
-	-- 		vim.g.mkdp_filetypes = { "markdown" }
-	-- 	end,
-	-- 	ft = { "markdown" },
-	-- },
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },

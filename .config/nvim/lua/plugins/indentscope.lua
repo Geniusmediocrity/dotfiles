@@ -71,7 +71,7 @@ return {
 				"notify",
 				"toggleterm",
 				"which_key",
-				"TelescopePrompt",
+				"FzfPrompt",
 			},
 			callback = function()
 				vim.b.miniindentscope_disable = true

@@ -14,7 +14,7 @@ return {
 				gitsigns = true,
 				neotree = true,
 				nvimtree = true,
-				telescope = true,
+				fzf = true,
 				treesitter = true,
 				bufferline = true,
 				which_key = true,

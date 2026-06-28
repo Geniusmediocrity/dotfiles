@@ -8,7 +8,7 @@ return {
 	require("core.keymaps.noice"),
 	require("core.keymaps.gitsigns"),
 	require("core.keymaps.terminal"),
-	require("core.keymaps.telescope"),
+	require("core.keymaps.fzf"),
 	require("core.keymaps.fff"),
 	require("core.keymaps.lsp"),
 }

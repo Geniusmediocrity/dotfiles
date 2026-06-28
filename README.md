@@ -1,5 +1,9 @@
 # Dot-files
 
+## NeoVim
+
+<doc/imgs/nvim-1.png>
+
 ## Fonts
 
 In terminals such as alacritty or wezterm I use Dank Mono Nerd Font. You can install it <a href="https://eng.fontke.com/search/font/Dank%20Mono/">here</a> or you can use your own font.
@@ -16,18 +20,18 @@ In terminals such as alacritty or wezterm I use Dank Mono Nerd Font. You can ins
 
 > A simple, safe, and transparent script to symlink dotfiles from `~/dotfiles`.
 
-Synchronizes your configurations across machines with predictable behavior:  
-📁 `~/dotfiles/home/` → `~/`  
+Synchronizes your configurations across machines with predictable behavior:
+📁 `~/dotfiles/home/` → `~/`
 📁 `~/dotfiles/.config/` → `~/.config/`
 
 #### Features
 
-- **Safe by default**:  
-  — Never overwrites regular files or directories.  
+- **Safe by default**:
+  — Never overwrites regular files or directories.
   — Only updates _symbolic links_ — and only with `--force`.
 - **`--dry-run` mode**: preview changes without modifying your system.
 - **Colored output**: clearly shows linked, skipped, or existing items.
-- Handles nested structures:  
+- Handles nested structures:
   `~/dotfiles/.config/nvim/init.lua` → `~/.config/nvim/init.lua`
 - Zero dependencies: pure POSIX-compatible shell (works in `bash`/`zsh`). No `stow`, no Python.
 

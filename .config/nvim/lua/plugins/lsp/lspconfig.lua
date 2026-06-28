@@ -65,14 +65,14 @@ return {
 					--  Similar to document symbols, except searches over your entire project.
 					map(
 						"<leader>lw",
-						require("fzf-lua").lsp_dynamic_workspace_symbols,
+						require("fzf-lua").lsp_live_workspace_symbols,
 						"Open [W]orkspace Objects(Symbols)"
 					)
 
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
-					map("<leader>lt", require("fzf-lua").lsp_type_definitions, "[G]oto [T]ype Definition")
+					map("<leader>lt", require("fzf-lua").lsp_typedefs, "[G]oto [T]ype Definition")
 
 					-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 					---@param client vim.lsp.Client

@@ -1,0 +1,2 @@
+-[ ] structure configs and automated configuration files
+-[ ] refactor README.md for more human-readable format

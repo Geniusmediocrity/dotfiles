@@ -15,7 +15,7 @@ return {
 				"ruff", -- python formatter
 				"clang-format", -- c/c++ formatter
 				"taplo", -- toml formatter
-				-- "asmfmt", -- assembler
+				"csharpier", -- c#
 			},
 		})
 
@@ -51,7 +51,7 @@ return {
 
 				toml = { "taplo" },
 
-				asm = { "asmfmt" },
+				cs = { "csharpier" },
 
 				-- Fallback для всех остальных типов файлов: использовать LSP
 				["_"] = { "trim_whitespace" },

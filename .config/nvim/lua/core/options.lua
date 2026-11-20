@@ -99,3 +99,12 @@ vim.opt.guicursor = {
 	-- Special mode (like select)
 	"sm:block-blinkwait175-blinkoff150-blinkon175",
 }
+
+-- === Native neovim Spell checking ===
+-- Undercurl
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+-- Enable spell check
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us", "ru_ru" }

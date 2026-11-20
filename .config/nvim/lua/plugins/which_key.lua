@@ -23,6 +23,7 @@ return { -- Useful plugin to show you pending keybinds.
 			{ "<leader>L", group = "󰒋 [L]ive Server" },
 			{ "<leader>l", group = "󰰌 [L]SP" },
 			{ "<leader>w", group = " [W]indow" },
+			{ "<leader>M", group = " [M]arkdown" },
 			{ "<leader>n", group = "󰰒 [N]oice" },
 			{ "<leader>d", group = "󰃤 [D]ebug" },
 		},

@@ -18,7 +18,7 @@ function proxy_on() {
         return 0
     fi
 
-    local proxy="http://127.0.0.1:2080/"
+    local proxy="http://127.0.0.1:7890/"
     export http_proxy="$proxy" \
         https_proxy=$proxy \
         ftp_proxy=$proxy \

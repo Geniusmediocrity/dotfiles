@@ -15,71 +15,87 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
-require("lazy").setup({
-	-- Detect tabstop and shiftwidth automatically
-	"NMAC427/guess-indent.nvim",
+require("lazy").setup(
+	{
+		-- = Plugins =
 
-	-- Yazi
-	require("plugins.yazi"),
+		-- Detect tabstop and shiftwidth automatically
+		require("plugins.guess_indent"),
 
-	-- Git signs helper
-	require("plugins.gitsigns"),
+		-- Vim tmux navigating
+		require("plugins.vim_tmux_navigator"),
 
-	-- Fuzzy Finder
-	require("plugins.fzf"),
+		-- Yazi
+		require("plugins.yazi"),
 
-	-- fff.nvim
-	require("plugins.fff"),
+		-- Git signs helper
+		require("plugins.gitsigns"),
 
-	-- Bufferline -- turns buffers(on the top of the screen in nvim) to tabs
-	require("plugins.bufferline"),
+		-- Fuzzy Finder
+		require("plugins.fzf"),
 
-	-- TreeSiteer
-	require("plugins.treesitter"),
+		-- fff.nvim
+		require("plugins.fff"),
 
-	-- Theme
-	require("plugins.themes"),
+		-- Bufferline -- turns buffers(on the top of the screen in nvim) to tabs
+		require("plugins.bufferline"),
 
-	-- Blink.cmp Nvim
-	require("plugins.blink_cmp"),
+		-- TreeSiteer
+		require("plugins.treesitter"),
 
-	-- Lualine configuration
-	require("plugins.lualine"),
+		-- Theme
+		require("plugins.themes"),
 
-	-- Fast code navigating
-	require("plugins.flush"),
+		-- Blink.cmp Nvim
+		require("plugins.blink_cmp"),
 
-	-- Color pickers and color previewers
-	require("plugins.color_pickers"),
+		-- Lualine configuration
+		require("plugins.lualine"),
 
-	-- Comments
-	-- Highlight todo, notes, etc in comments
-	require("plugins.comments"),
+		-- Fast code navigating
+		require("plugins.flush"),
 
-	-- Live preview is the same live server
-	require("plugins.live_preview"),
+		-- Color pickers and color previewers
+		require("plugins.color_pickers"),
 
-	-- Which-key- Useful plugin to show you pending keybinds.
-	require("plugins.which_key"),
+		-- Comments
+		-- Highlight todo, notes, etc in comments
+		require("plugins.comments"),
 
-	-- Noice = Nice, Noise, Notice
-	require("plugins.noice"),
+		-- Markdown(md) TOC generator and updater
+		require("plugins.mtoc"),
 
-	-- Indential guides
-	require("plugins.indentscope"),
+		-- Live preview is the same live server
+		require("plugins.live_preview"),
 
-	-- Better Inline diagnostics
-	require("plugins.inline_diagnostics"),
+		-- Which-key- Useful plugin to show you pending keybinds.
+		require("plugins.which_key"),
 
-	-- Neovim Terminal
-	require("plugins.terminal"),
+		-- Noice = Nice, Noise, Notice
+		require("plugins.noice"),
 
-	-- Uv in neovim -- the best plug for python coding, especially in combination with compiler
-	require("plugins.uv"),
+		-- Indential guides
+		require("plugins.indentscope"),
 
-	-- General framework for context aware hover providers
-	require("plugins.hover"),
+		-- Better Inline diagnostics
+		require("plugins.inline_diagnostics"),
 
-	-- LSP and other good stuff for vibe coding
-	require("plugins.lsp"),
-})
+		-- Neovim Terminal
+		require("plugins.terminal"),
+
+		-- Uv in neovim -- the best plug for python coding, especially in combination with compiler
+		require("plugins.uv"),
+
+		-- General framework for context aware hover providers
+		require("plugins.hover"),
+
+		-- LSP and other good stuff for vibe coding
+		require("plugins.lsp"),
+	},
+	-- = Parameters =
+	{
+		rocks = {
+			enabled = false,
+		},
+	}
+)

@@ -143,7 +143,8 @@ return {
 			vim.diagnostic.config({
 				severity_sort = true,
 				float = { border = "rounded", source = "if_many" },
-				underline = { severity = vim.diagnostic.severity.ERROR },
+				-- underline = { severity = vim.diagnostic.severity.ERROR },
+				underline = true,
 				signs = {
 					text = {
 						[vim.diagnostic.severity.ERROR] = " ",
@@ -180,10 +181,6 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- === Asembly lang ===
-				-- asmfmt = {},
-				-- asm_lsp = {},
-
 				-- === C/C++ ===
 				clangd = {
 					cmd = {
@@ -203,8 +200,6 @@ return {
 						"--compile-commands-dir=build",
 					},
 				},
-				clang_format = {},
-				-- cpplint = {},
 				codelldb = {},
 				-- cmake_language_server = {},
 				-- cmakelang = {},
@@ -213,8 +208,7 @@ return {
 				-- === Python ===
 				pyright = {},
 				debugpy = {},
-				-- ruff = {},
-
+				ruff = {},
 				-- === Rust ===
 				rust_analyzer = {
 					settings = {
@@ -241,44 +235,41 @@ return {
 						},
 					},
 				},
-				-- ui lib
-				slint_lsp = {},
 
 				-- === Web ===
-				-- prettier = {},
-				-- tsgo = {},
-				-- cssls = {},
-				-- html = {
-				-- 	cmd = { "vscode-html-language-server", "--stdio" },
-				-- 	filetypes = { "html" },
-				-- 	init_options = {
-				-- 		configurationSection = { "html", "css", "javascript" },
-				-- 		embeddedLanguages = {
-				-- 			css = true,
-				-- 			javascript = true,
-				-- 			html = true,
-				-- 		},
-				-- 	},
-				-- 	root_dir = function(fname)
-				-- 		return root_pattern(fname) or vim.loop.os_homedir()
-				-- 	end,
-				-- 	settings = {},
-				-- },
+				tsgo = {},
+				cssls = {},
+				html = {
+					cmd = { "vscode-html-language-server", "--stdio" },
+					filetypes = { "html" },
+					init_options = {
+						configurationSection = { "html", "css", "javascript" },
+						embeddedLanguages = {
+							css = true,
+							javascript = true,
+							html = true,
+						},
+					},
+					root_dir = function(fname)
+						return root_pattern(fname) or vim.loop.os_homedir()
+					end,
+					settings = {},
+				},
 
 				-- === Bash ===
-				-- bashls = {
-				-- 	filetypes = { "shell", "bash" },
-				-- 	settings = {
-				-- 		backgroundAnalysisMaxFiles = 700,
-				-- 		enableSourceErrorDiagnostics = true,
-				-- 		explainshellEndpoint = "",
-				-- 		globPattern = "**/*@(.sh|.inc|.bash|.command)",
-				-- 		includeAllWorkspaceSymbols = true,
-				-- 		logLevel = "info",
-				-- 		shellcheckArguments = "",
-				-- 		shellcheckPath = "shellcheck",
-				-- 	},
-				-- },
+				bashls = {
+					filetypes = { "shell", "bash" },
+					settings = {
+						backgroundAnalysisMaxFiles = 700,
+						enableSourceErrorDiagnostics = true,
+						explainshellEndpoint = "",
+						globPattern = "**/*@(.sh|.inc|.bash|.command)",
+						includeAllWorkspaceSymbols = true,
+						logLevel = "info",
+						shellcheckArguments = "",
+						shellcheckPath = "shellcheck",
+					},
+				},
 				-- shfmt = {
 				-- 	binaryNextLine = true,
 				-- 	caseIndent = true,
@@ -296,7 +287,6 @@ return {
 				-- postgres_lsp = {},
 
 				-- === Lua ===
-				stylua = {},
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
@@ -310,13 +300,13 @@ return {
 					},
 				},
 
-				-- Docker and Docker Compose
+				-- === C# ===
+				roslyn_ls = {},
+
+				-- === Docker ===
 				-- docker_language_server = {},
 				docker_compose_language_service = {},
 				dockerls = {},
-
-				-- === Toml ===
-				taplo = {},
 
 				-- === Ansible ===
 				ansiblels = {},

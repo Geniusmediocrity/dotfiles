@@ -124,7 +124,6 @@ else
     export EDITOR='nvim'
 fi
 # Get all environment keys for nvim
-source /etc/environment
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -274,6 +273,7 @@ bindkey '\ef' forward-char
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # === Terminal Proxy for wget, (used by pacman)curl etc. ===
-source ~/.proxy-config.sh
-# Turning on the proxy
-proxy_on
+# source ~/.proxy-config.sh
+# # Turning on the proxy
+# proxy_on
+export PATH="$HOME/go/bin:$PATH"

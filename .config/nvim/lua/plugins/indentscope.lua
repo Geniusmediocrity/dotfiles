@@ -1,7 +1,6 @@
 return {
 	"nvim-mini/mini.indentscope",
 	version = "*",
-	-- No need to copy this inside `setup()`. Will be used automatically.
 	opts = {
 		-- Draw options
 		draw = {
